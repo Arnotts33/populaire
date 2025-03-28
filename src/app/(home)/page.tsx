@@ -10,13 +10,13 @@ import StMich from "./_sections/StMich";
 export default function Home() {
 	return (
 		<>
-			<h1>Home Page</h1>
+			{/* <h1>Home Page</h1>
 			<Hero />
 			<About />
 			<Dwitches />
 			<Gallery />
 			<BarAManger />
-			<StMich />
+			<StMich /> */}
 		</>
 	);
 }
