@@ -1,9 +1,15 @@
+import Image from "next/image";
+import heroImg from "@/assets/images/dorian-kitchen2.webp";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
 	return (
-		<section>
-			<h2>Hero Section</h2>
+		<section className={styles.hero}>
+			<Image src={heroImg} alt="Kitchen" className={styles.heroImg} />
+			<div className={styles.heroText}>
+				<h1>Dwitcherie</h1>
+				<h2>Bar à Manger, Cave à vins</h2>
+			</div>
 		</section>
 	);
 };

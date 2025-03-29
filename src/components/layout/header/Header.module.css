@@ -1,12 +1,11 @@
 .header {
-	width: 100%;
-	position: absolute;
+	width: 80%;
+	max-width: 1980px;
+	margin-inline: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 4rem;
-	z-index: 1;
-	top: 0;
+	padding-block: 2rem;
 }
 
 .nav {
@@ -36,7 +35,6 @@
 	top: 30px;
 	left: 50%;
 	background-color: black;
-	/* border-radius: 50%; */
 	transform: scale(0) translateX(-50%);
 	transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
