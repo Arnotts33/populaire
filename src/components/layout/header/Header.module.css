@@ -1,6 +1,6 @@
 .header {
-	width: 95%;
-	max-width: 1980px;
+	width: 95vw;
+	max-width: 1920px;
 	margin-inline: auto;
 	display: flex;
 	justify-content: space-between;
@@ -8,9 +8,9 @@
 	padding-block: 2rem;
 }
 
-@media (width > 1980px) {
+@media (width > 1720px) {
 	.header {
-		width: 80%;
+		width: 80vw;
 	}
 }
 
