@@ -22,12 +22,22 @@
 	gap: 4rem;
 }
 
+@media (width < 760px) {
+	.nav {
+		display: none;
+	}
+}
+
 .el {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	z-index: 1;
 	transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+
+	a {
+		font-size: clamp(0.875rem, 0.8rem + 0.1vw, 1rem);
+	}
 }
 
 .el:hover {
@@ -65,7 +75,7 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background-color: palevioletred;
+	background-color: #d87093;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -119,4 +129,54 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* Mobile Burger Button */
+@media (width > 760px) {
+	.mobileMenuContainer {
+		display: none;
+	}
+}
+.mobileBurger {
+	background: transparent;
+	border: none;
+	position: relative;
+	z-index: 1000;
+}
+
+.hamburger {
+	fill: black;
+	transition: 1s;
+}
+
+.hamburger.mobileBurgerActive {
+	fill: white;
+	transition: 0.8s;
+}
+
+.topLine,
+.bottomLine,
+.middleLine {
+	transition: y 0.3s ease-in 0.3s, rotate 0.3s ease-in, opacity 0s 0.3s;
+	transform-origin: center;
+}
+
+.mobileBurgerActive :is(.topLine, .bottomLine, .middleLine) {
+	transition: y 0.3s ease-in, rotate 0.3s ease-in 0.3s, opacity 0s 0.3s;
+}
+
+.mobileBurgerActive :is(.topLine, .bottomLine) {
+	y: 45;
+}
+
+.mobileBurgerActive .topLine {
+	rotate: 45deg;
+}
+
+.mobileBurgerActive .bottomLine {
+	rotate: -45deg;
+}
+
+.mobileBurgerActive .middleLine {
+	opacity: 0;
 }

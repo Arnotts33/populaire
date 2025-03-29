@@ -1,8 +1,8 @@
-import styles from "./StMich.module.scss";
+import styles from "./StMich.module.css";
 
 const StMich = () => {
 	return (
-		<section>
+		<section className={styles.stMich} id="st-mich">
 			<h2>St Mich section</h2>
 		</section>
 	);

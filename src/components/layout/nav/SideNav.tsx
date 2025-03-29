@@ -10,6 +10,8 @@ import Image from "next/image";
 
 const navItems = [
 	{ title: "Accueil", href: "/", target: "_self" },
+	{ title: "Dwitches", href: "/#dwitches", target: "_self" },
+	{ title: "Bar à Manger", href: "/#bar-a-manger", target: "_self" },
 	{ title: "Contact", href: "/contact", target: "_self" },
 	{
 		title: "Venir",
@@ -50,7 +52,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 					{navItems.map((item, index) => {
 						return (
 							<motion.div
-								className={styles.link}
+								className={styles.links}
 								key={index}
 								custom={index}
 								variants={slide}

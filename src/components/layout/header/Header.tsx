@@ -16,6 +16,7 @@ const Header = () => {
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
 
+	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
 	useEffect(() => {
 		if (isActive) document.body.classList.add("no-doc-scroll");
 
@@ -28,6 +29,7 @@ const Header = () => {
 		if (isActive) setIsActive(false);
 	}, [pathname]);
 
+	// GSAP ANIMATION FOR MENU BUTTON ON SCROLL
 	useLayoutEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
@@ -75,12 +77,12 @@ const Header = () => {
 
 				<nav className={styles.nav}>
 					<div className={styles.el}>
-						<Link href="#">Dwitches</Link>
+						<Link href="/#dwitches">Dwitches</Link>
 						<div className={styles.indicator}></div>
 					</div>
 
 					<div className={styles.el}>
-						<Link href="#">Bar à Manger</Link>
+						<Link href="/#bar-a-manger">Bar à Manger</Link>
 						<div className={styles.indicator}></div>
 					</div>
 
@@ -99,6 +101,46 @@ const Header = () => {
 						<div className={styles.indicator}></div>
 					</div>
 				</nav>
+
+				{/* Burger Menu on Small Devices */}
+				<div className={styles.mobileMenuContainer}>
+					<button
+						className={styles.mobileBurger}
+						onClick={handleToggleMenu}
+						aria-controls="mobile-menu"
+						aria-expanded={isActive}
+					>
+						<svg
+							className={`${styles.hamburger} ${
+								isActive ? styles.mobileBurgerActive : ""
+							}`}
+							viewBox="0 0 100 100"
+							width={60}
+						>
+							<rect
+								className={styles.topLine}
+								width={80}
+								height={10}
+								x={10}
+								y={25}
+							></rect>
+							<rect
+								className={styles.middleLine}
+								width={80}
+								height={10}
+								x={10}
+								y={45}
+							></rect>
+							<rect
+								className={styles.bottomLine}
+								width={80}
+								height={10}
+								x={10}
+								y={65}
+							></rect>
+						</svg>
+					</button>
+				</div>
 			</header>
 
 			{/* Burger Menu on Scroll */}
