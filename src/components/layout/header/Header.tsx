@@ -2,8 +2,10 @@
 import Image from "next/image";
 import logoImg from "@/assets/images/logo-header.svg";
 import styles from "./Header.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
 
 const Header = () => {
 	const header = useRef<HTMLDivElement>(null);
@@ -14,6 +16,34 @@ const Header = () => {
 	useEffect(() => {
 		if (isActive) setIsActive(false);
 	}, [pathname]);
+
+	useLayoutEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.to(button.current, {
+			scrollTrigger: {
+				trigger: document.documentElement,
+				start: 0,
+				end: window.innerHeight,
+
+				onLeave: () => {
+					gsap.to(button.current, {
+						scale: 1,
+						duration: 0.25,
+						ease: "power1.out",
+					});
+				},
+
+				onEnterBack: () => {
+					gsap.to(button.current, {
+						scale: 0,
+						duration: 0.25,
+						ease: "power1.out",
+					});
+				},
+			},
+		});
+	}, []);
 
 	return (
 		<>
@@ -53,8 +83,17 @@ const Header = () => {
 
 			{/* Burger Menu on Scroll */}
 			<div ref={button} className={styles.headerButtonContainer}>
-				<div className={styles.headerButton}>
-					<div className={styles.burger}></div>
+				<div
+					onClick={() => {
+						setIsActive(!isActive);
+					}}
+					className={styles.headerButton}
+				>
+					<div
+						className={`${styles.burger} ${
+							isActive ? styles.burgerActive : ""
+						}`}
+					></div>
 				</div>
 			</div>
 		</>
