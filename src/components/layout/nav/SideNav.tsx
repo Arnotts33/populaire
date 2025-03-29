@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import mascotte from "@/assets/images/mascotte-animate.gif";
+import Image from "next/image";
 
 const navItems = [
 	{ title: "Accueil", href: "/", target: "_self" },
@@ -43,7 +45,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 			<div className={styles.menuBody}>
 				<nav className={styles.nav}>
 					<div className={styles.navHeader}>
-						<p className={styles.navTitle}>Populaire</p>
+						<p className={styles.navTitle}>On va où?</p>
 					</div>
 					{navItems.map((item, index) => {
 						return (
@@ -72,6 +74,11 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 							</motion.div>
 						);
 					})}
+					<Image
+						src={mascotte}
+						alt="Mascotte"
+						className={styles.mascotte}
+					/>
 				</nav>
 			</div>
 

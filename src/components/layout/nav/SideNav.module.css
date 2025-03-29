@@ -17,23 +17,31 @@
 		flex-direction: column;
 		gap: 0.75rem;
 		margin-top: 5rem;
+		border-bottom: 1px solid rgb(153, 153, 153);
 	}
 
 	.navHeader {
 		color: rgb(153, 153, 153);
 		border-bottom: 1px solid rgb(153, 153, 153);
 		text-transform: uppercase;
+		margin-bottom: 2rem;
 	}
 
 	.navTitle {
-		font-size: 0.75rem;
-		margin-bottom: 1rem;
+		font-size: 1rem;
 	}
 
 	a {
 		text-decoration: none;
 		font-size: 4rem;
 		transition: all 0.3s ease-in-out;
+	}
+
+	.mascotte {
+		align-self: flex-end;
+		margin-top: 2rem;
+		width: 100px;
+		height: auto;
 	}
 }
 
