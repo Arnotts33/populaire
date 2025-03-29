@@ -1,6 +1,6 @@
 .hero {
 	height: 100vh;
-	width: 65%;
+	width: 95%;
 	margin-top: 2rem;
 	margin-bottom: 100vh;
 	margin-inline: auto;
@@ -12,6 +12,7 @@
 
 @media (width > 1980px) {
 	.hero {
+		width: 65%;
 		margin-top: 4rem;
 	}
 }
