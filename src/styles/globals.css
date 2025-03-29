@@ -7,6 +7,31 @@
 	--font-necto-mono: var(--font-necto-mono);
 }
 
+/* SCROLL BLOCK WHEN MODAL OPEN */
+
+:root:has(.no-doc-scroll) {
+	overflow: hidden;
+}
+
+/* SCROLLBAR HIDE */
+
+/* Pour Chrome, Edge et Safari */
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* Pour Firefox */
+html {
+	scrollbar-width: none;
+}
+
+/* Pour IE et Edge (moins pertinent en 2025 mais sait-on jamais) */
+body {
+	-ms-overflow-style: none;
+}
+
+/* GLOBAL STYLES */
+
 html,
 body {
 	max-width: 100vw;

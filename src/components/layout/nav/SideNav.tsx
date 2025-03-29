@@ -1,8 +1,11 @@
+"use client";
+
 import styles from "./SideNav.module.css";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
-import { scrollToTop } from "@/utils/scrollToTop";
+// import { scrollToTop } from "@/utils/scrollToTop";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
 	{ title: "Accueil", href: "/", target: "_self" },
@@ -19,6 +22,16 @@ interface SideNavProps {
 }
 
 const SideNav = ({ toggleMenu }: SideNavProps) => {
+	const pathname = usePathname();
+
+	function scrollToTop(
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+	) {
+		event.preventDefault();
+		window.scrollTo({ top: 0, behavior: "smooth" });
+		toggleMenu();
+	}
+
 	return (
 		<motion.div
 			className={styles.menu}
@@ -45,7 +58,13 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 							>
 								<Link
 									href={item.href}
-									onClick={toggleMenu}
+									onClick={(event) => {
+										if (pathname === item.href) {
+											scrollToTop(event);
+										} else {
+											toggleMenu();
+										}
+									}}
 									target={item.target}
 								>
 									{item.title}

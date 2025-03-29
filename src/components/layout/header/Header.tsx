@@ -16,6 +16,14 @@ const Header = () => {
 	const pathname = usePathname();
 
 	useEffect(() => {
+		if (isActive) document.body.classList.add("no-doc-scroll");
+
+		return () => {
+			document.body.classList.remove("no-doc-scroll");
+		};
+	}, [isActive]);
+
+	useEffect(() => {
 		if (isActive) setIsActive(false);
 	}, [pathname]);
 

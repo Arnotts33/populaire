@@ -1,5 +1,6 @@
-export const scrollToTop = (): void => {
-	if (typeof window !== "undefined") {
-		window.scrollTo({ top: 0, behavior: "smooth" });
-	}
-};
+export function scrollToTop(
+	event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+) {
+	event.preventDefault();
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
