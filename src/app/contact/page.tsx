@@ -2,9 +2,9 @@ import styles from "./page.module.css";
 
 const Contact = () => {
 	return (
-		<div>
+		<section className={styles.contact}>
 			<h1>Contact Page</h1>
-		</div>
+		</section>
 	);
 };
 export default Contact;

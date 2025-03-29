@@ -49,18 +49,14 @@
 	transform: scale(1) translateX(-50%);
 }
 
+/* HEADER MENU BUTTON ON SCROLL */
+
 .headerButtonContainer {
 	transform: scale(0);
 	position: fixed;
 	right: 0px;
 	top: 0px;
-	z-index: 4;
-}
-
-@media (width > 1720px) {
-	.headerButtonContainer {
-		/* right: 8vw; */
-	}
+	z-index: 1000;
 }
 
 .headerButton {

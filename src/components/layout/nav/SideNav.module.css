@@ -1,0 +1,48 @@
+.menu {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 12;
+	height: 100vh;
+	background-color: rgb(41, 41, 41);
+	color: white;
+	font-family: var(--font-poppins);
+}
+
+.menuBody {
+	padding: 100px;
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-top: 5rem;
+	}
+
+	.navHeader {
+		color: rgb(153, 153, 153);
+		border-bottom: 1px solid rgb(153, 153, 153);
+		text-transform: uppercase;
+	}
+
+	.navTitle {
+		font-size: 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 4rem;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.menuFooter {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	padding: 100px;
+	bottom: 5rem;
+	font-size: 0.75rem;
+}

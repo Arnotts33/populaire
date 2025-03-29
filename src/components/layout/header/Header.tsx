@@ -6,9 +6,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { AnimatePresence } from "framer-motion";
+import SideNav from "../nav/SideNav";
+import Link from "next/link";
 
 const Header = () => {
-	const header = useRef<HTMLDivElement>(null);
 	const button = useRef<HTMLDivElement>(null);
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
@@ -45,9 +47,13 @@ const Header = () => {
 		});
 	}, []);
 
+	function handleToggleMenu() {
+		setIsActive(!isActive);
+	}
+
 	return (
 		<>
-			<header ref={header} className={styles.header}>
+			<header id="header" className={styles.header}>
 				<div>
 					<a href="/">
 						<Image
@@ -60,22 +66,27 @@ const Header = () => {
 
 				<nav className={styles.nav}>
 					<div className={styles.el}>
-						<a href="#">Dwitches</a>
+						<Link href="#">Dwitches</Link>
 						<div className={styles.indicator}></div>
 					</div>
 
 					<div className={styles.el}>
-						<a href="#">Bar à Manger</a>
+						<Link href="#">Bar à Manger</Link>
 						<div className={styles.indicator}></div>
 					</div>
 
 					<div className={styles.el}>
-						<a href="#">Contact</a>
+						<Link href="/contact">Contact</Link>
 						<div className={styles.indicator}></div>
 					</div>
 
 					<div className={styles.el}>
-						<a href="#">Venir</a>
+						<a
+							href="https://maps.app.goo.gl/xeZxjjX8fh2jLzEQ8"
+							target="_blank"
+						>
+							Venir
+						</a>
 						<div className={styles.indicator}></div>
 					</div>
 				</nav>
@@ -83,12 +94,7 @@ const Header = () => {
 
 			{/* Burger Menu on Scroll */}
 			<div ref={button} className={styles.headerButtonContainer}>
-				<div
-					onClick={() => {
-						setIsActive(!isActive);
-					}}
-					className={styles.headerButton}
-				>
+				<div onClick={handleToggleMenu} className={styles.headerButton}>
 					<div
 						className={`${styles.burger} ${
 							isActive ? styles.burgerActive : ""
@@ -96,6 +102,10 @@ const Header = () => {
 					></div>
 				</div>
 			</div>
+
+			<AnimatePresence mode="wait">
+				{isActive && <SideNav toggleMenu={handleToggleMenu} />}
+			</AnimatePresence>
 		</>
 	);
 };
