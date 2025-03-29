@@ -6,6 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { cubicBezier, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import SideNav from "../nav/SideNav";
 import Link from "next/link";
@@ -110,6 +111,22 @@ const Header = () => {
 					></div>
 				</div>
 			</div>
+
+			<AnimatePresence mode="wait">
+				{isActive && (
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						transition={{
+							duration: 0.8,
+							ease: cubicBezier(0.25, 0.1, 0.25, 1),
+						}}
+						className={styles.overlay}
+						onClick={handleToggleMenu}
+					></motion.div>
+				)}
+			</AnimatePresence>
 
 			<AnimatePresence mode="wait">
 				{isActive && <SideNav toggleMenu={handleToggleMenu} />}

@@ -101,11 +101,22 @@
 .burgerActive {
 	&::after {
 		transform: translateY(4px) rotate(45deg);
-		/* top: -1px; */
 	}
 
 	&::before {
 		transform: translateY(-4px) rotate(-45deg);
-		/* top: 0px; */
 	}
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

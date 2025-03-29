@@ -3,7 +3,6 @@
 import styles from "./SideNav.module.css";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
-// import { scrollToTop } from "@/utils/scrollToTop";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -39,6 +38,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 			initial="initial"
 			animate="enter"
 			exit="exit"
+			onClick={(e) => e.stopPropagation()}
 		>
 			<div className={styles.menuBody}>
 				<nav className={styles.nav}>
