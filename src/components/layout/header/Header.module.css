@@ -14,6 +14,16 @@
 	}
 }
 
+.logo {
+	width: 175px;
+}
+
+@media (width < 480px) {
+	.logo {
+		width: 150px;
+	}
+}
+
 .nav {
 	font-family: var(--font-poppins);
 	text-transform: uppercase;
@@ -60,7 +70,7 @@
 }
 
 /* HEADER MENU BUTTON ON SCROLL */
-
+/* --------------------------------------- */
 .headerButtonContainer {
 	transform: scale(0);
 	position: fixed;
@@ -131,7 +141,8 @@
 	align-items: center;
 }
 
-/* Mobile Burger Button */
+/* MOBILE BURGER BUTTON */
+/* --------------------------------------- */
 @media (width > 760px) {
 	.mobileMenuContainer {
 		display: none;

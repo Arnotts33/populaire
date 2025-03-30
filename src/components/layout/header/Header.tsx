@@ -66,13 +66,13 @@ const Header = () => {
 		<>
 			<header id="header" className={styles.header}>
 				<div>
-					<a href="/">
+					<Link href="/">
 						<Image
 							src={logoImg}
 							alt="Logo"
 							className={styles.logo}
 						/>
-					</a>
+					</Link>
 				</div>
 
 				<nav className={styles.nav}>
@@ -115,7 +115,7 @@ const Header = () => {
 								isActive ? styles.mobileBurgerActive : ""
 							}`}
 							viewBox="0 0 100 100"
-							width={60}
+							width={50}
 						>
 							<rect
 								className={styles.topLine}
@@ -127,9 +127,16 @@ const Header = () => {
 							<rect
 								className={styles.middleLine}
 								width={80}
-								height={10}
+								height={6}
 								x={10}
-								y={45}
+								y={52}
+							></rect>
+							<rect
+								className={styles.middleLine}
+								width={80}
+								height={6}
+								x={10}
+								y={42}
 							></rect>
 							<rect
 								className={styles.bottomLine}
