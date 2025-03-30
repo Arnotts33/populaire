@@ -47,7 +47,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 			<div className={styles.menuBody}>
 				<nav className={styles.nav}>
 					<div className={styles.navHeader}>
-						<p className={styles.navTitle}>On va où?</p>
+						<p className={styles.navTitle}>On va où ?</p>
 					</div>
 					{navItems.map((item, index) => {
 						return (
@@ -70,6 +70,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 										}
 									}}
 									target={item.target}
+									className={styles.link}
 								>
 									{item.title}
 								</Link>
@@ -82,21 +83,20 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 						className={styles.mascotte}
 					/>
 				</nav>
-			</div>
-
-			<div className={styles.menuFooter}>
-				<a
-					href="https://www.instagram.com/populairedwitcherie/?hl=fr"
-					target="_blank"
-				>
-					Insagram
-				</a>
-				<a
-					href="https://lefooding.com/restaurants/populaire"
-					target="_blank"
-				>
-					Le Fooding
-				</a>
+				<div className={styles.menuFooter}>
+					<a
+						href="https://www.instagram.com/populairedwitcherie/?hl=fr"
+						target="_blank"
+					>
+						Instagram
+					</a>
+					<a
+						href="https://lefooding.com/restaurants/populaire"
+						target="_blank"
+					>
+						Le Fooding
+					</a>
+				</div>
 			</div>
 		</motion.div>
 	);
