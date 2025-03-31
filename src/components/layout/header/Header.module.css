@@ -58,15 +58,15 @@
 	position: absolute;
 	width: 100%;
 	height: 2px;
-	top: 24px;
-	left: 50%;
+	top: 32px;
+	/* left: 50%; */
 	background-color: black;
-	transform: scale(0) translateX(-50%);
+	transform: scale(0) translateY(-10px);
 	transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .el:hover .indicator {
-	transform: scale(1) translateX(-50%);
+	transform: scale(1) translateY(-10px);
 }
 
 /* HEADER MENU BUTTON ON SCROLL */
