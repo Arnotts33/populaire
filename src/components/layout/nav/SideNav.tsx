@@ -4,36 +4,15 @@ import styles from "./SideNav.module.css";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import mascotte from "@/assets/images/mascotte-animate.gif";
+import { handleNavigation } from "@/utils/handleNavigation";
 import Image from "next/image";
+import { navItems } from "@/constants/navItems";
 
-const navItems = [
-	{ title: "Accueil", href: "/", target: "_self" },
-	{ title: "Dwitches", href: "/#dwitches", target: "_self" },
-	{ title: "Bar à Manger", href: "/#bar-a-manger", target: "_self" },
-	{ title: "Contact", href: "/contact", target: "_self" },
-	{
-		title: "Venir",
-		href: "https://maps.app.goo.gl/xeZxjjX8fh2jLzEQ8",
-		target: "_blank",
-	},
-];
-
-interface SideNavProps {
-	toggleMenu: () => void;
-}
-
-const SideNav = ({ toggleMenu }: SideNavProps) => {
+const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 	const pathname = usePathname();
-
-	function scrollToTop(
-		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-	) {
-		event.preventDefault();
-		window.scrollTo({ top: 0, behavior: "smooth" });
-		toggleMenu();
-	}
+	const router = useRouter();
 
 	return (
 		<motion.div
@@ -49,10 +28,9 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 					<div className={styles.navHeader}>
 						<p className={styles.navTitle}>On va où ?</p>
 					</div>
-					{navItems.map((item, index) => {
-						return (
-							<motion.div
-								className={styles.links}
+					<ul>
+						{navItems.map((item, index) => (
+							<motion.li
 								key={index}
 								custom={index}
 								variants={slide}
@@ -62,26 +40,17 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 							>
 								<Link
 									href={item.href}
-									onClick={(event) => {
-										if (pathname === item.href) {
-											scrollToTop(event);
-										} else {
-											toggleMenu();
-										}
-									}}
-									target={item.target}
+									onClick={(event) =>
+										handleNavigation(event, item, pathname, router, toggleMenu)
+									}
 									className={styles.link}
 								>
 									{item.title}
 								</Link>
-							</motion.div>
-						);
-					})}
-					<Image
-						src={mascotte}
-						alt="Mascotte"
-						className={styles.mascotte}
-					/>
+							</motion.li>
+						))}
+					</ul>
+					<Image src={mascotte} alt="Mascotte" className={styles.mascotte} />
 				</nav>
 				<div className={styles.menuFooter}>
 					<a
@@ -90,10 +59,7 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 					>
 						Instagram
 					</a>
-					<a
-						href="https://lefooding.com/restaurants/populaire"
-						target="_blank"
-					>
+					<a href="https://lefooding.com/restaurants/populaire" target="_blank">
 						Le Fooding
 					</a>
 				</div>
@@ -101,4 +67,5 @@ const SideNav = ({ toggleMenu }: SideNavProps) => {
 		</motion.div>
 	);
 };
+
 export default SideNav;
