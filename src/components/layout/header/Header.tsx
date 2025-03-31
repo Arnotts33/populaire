@@ -38,7 +38,7 @@ const Header = () => {
 			scrollTrigger: {
 				trigger: document.documentElement,
 				start: 0,
-				end: window.innerHeight,
+				end: 400,
 
 				onLeave: () => {
 					gsap.to(button.current, {
@@ -58,6 +58,7 @@ const Header = () => {
 			},
 		});
 
+		// HIDE MENU BUTTON AT FOOTER
 		gsap.to(button.current, {
 			scrollTrigger: {
 				trigger: "#footer",
