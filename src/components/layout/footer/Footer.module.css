@@ -22,10 +22,6 @@
 	width: 100%;
 	box-sizing: border-box;
 
-	/* @media (width < 900px) {
-		padding: 4rem 2rem 2rem;
-	} */
-
 	@media (width < 540px) {
 		padding: 2rem 1rem 1rem 1rem;
 		gap: 2.5rem;
@@ -100,7 +96,6 @@
 	width: 95vw;
 	display: flex;
 	gap: 5rem;
-	font-size: clamp(0.625rem, 0.5668rem + 0.2708vw, 1rem);
 	margin-bottom: 2rem;
 
 	h3 {
@@ -119,7 +114,7 @@
 	.footerInfoItem {
 		display: flex;
 		flex-direction: column;
-		gap: 0.25rem;
+		gap: 1rem;
 		position: relative;
 	}
 

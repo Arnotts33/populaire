@@ -8,6 +8,7 @@ import footerPattern from "@/assets/images/footer-pattern.svg";
 import { navItems } from "@/constants/navItems";
 import { handleNavigation } from "@/utils/handleNavigation";
 import instagramIcon from "@/assets/icons/instagram.svg";
+import OpeningTimes from "@/components/ui/OpeningTimes";
 
 const Footer = () => {
 	const pathname = usePathname();
@@ -76,10 +77,7 @@ const Footer = () => {
 						<p>33000 Bordeaux</p>
 					</div>
 					<div className={styles.footerInfoItem}>
-						<h3>Horaires d'ouverture :</h3>
-						<p>Mercredi - Samedi : 12h - 19h30</p>
-						<p>Jeudi - Vendredi : 12h - 00h</p>
-						<p>Dimanche : 11h - 16h</p>
+						<OpeningTimes />
 					</div>
 					<div className={styles.footerInfoItem}>
 						<a

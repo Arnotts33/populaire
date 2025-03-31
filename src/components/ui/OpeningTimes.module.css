@@ -1,0 +1,15 @@
+.openingTimes {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+	font-size: clamp(0.625rem, 0.528rem + 0.4513vw, 1.25rem);
+
+	h3 {
+		font-weight: 500;
+	}
+
+	p {
+		font-family: var(--font-necto-mono);
+	}
+}

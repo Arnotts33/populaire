@@ -1,3 +1,50 @@
 .about {
-	min-height: 100vh;
+	font-family: var(--font-poppins);
+	display: flex;
+	justify-content: center;
+}
+
+.aboutContent {
+	width: 95%;
+	display: flex;
+
+	@media (width > 1720px) {
+		width: 80%;
+	}
+
+	@media (width < 720px) {
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+.contentRightSide {
+	flex: 2;
+
+	p {
+		font-size: clamp(1.25rem, 0.9007rem + 1.6245vw, 3.5rem);
+	}
+}
+
+.contentLeftSide {
+	flex: 1;
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8rem;
+
+	@media (width < 720px) {
+		width: 100%;
+		gap: 0;
+		align-items: flex-start;
+	}
+}
+
+.mascotte {
+	width: clamp(200px, 11.2872rem + 5.6408vw, 325px);
+
+	@media (width < 720px) {
+		align-self: center;
+	}
 }
