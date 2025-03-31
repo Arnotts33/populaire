@@ -14,7 +14,7 @@ const Footer = () => {
 	const router = useRouter();
 
 	return (
-		<footer className={styles.footer}>
+		<footer className={styles.footer} id="footer">
 			<Image
 				src={footerPattern}
 				alt="Footer checkered pattern"

@@ -100,7 +100,7 @@
 	width: 95vw;
 	display: flex;
 	gap: 5rem;
-	font-size: clamp(0.625rem, 0.528rem + 0.4513vw, 1.25rem);
+	font-size: clamp(0.625rem, 0.5668rem + 0.2708vw, 1rem);
 	margin-bottom: 2rem;
 
 	h3 {

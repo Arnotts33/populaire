@@ -6,6 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { cubicBezier, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import SideNav from "../nav/SideNav";
@@ -30,7 +31,7 @@ const Header = () => {
 	}, [pathname]);
 
 	// GSAP ANIMATION FOR MENU BUTTON ON SCROLL
-	useLayoutEffect(() => {
+	useGSAP(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
 		gsap.to(button.current, {
@@ -56,6 +57,29 @@ const Header = () => {
 				},
 			},
 		});
+
+		gsap.to(button.current, {
+			scrollTrigger: {
+				trigger: "#footer",
+				start: "top 25%",
+
+				onEnter: () => {
+					gsap.to(button.current, {
+						scale: 0,
+						duration: 0.25,
+						ease: "power1.out",
+					});
+				},
+
+				onLeaveBack: () => {
+					gsap.to(button.current, {
+						scale: 1,
+						duration: 0.25,
+						ease: "power1.out",
+					});
+				},
+			},
+		});
 	}, []);
 
 	function handleToggleMenu() {
@@ -67,11 +91,7 @@ const Header = () => {
 			<header id="header" className={styles.header}>
 				<div>
 					<Link href="/">
-						<Image
-							src={logoImg}
-							alt="Logo"
-							className={styles.logo}
-						/>
+						<Image src={logoImg} alt="Logo" className={styles.logo} />
 					</Link>
 				</div>
 
@@ -92,10 +112,7 @@ const Header = () => {
 					</div>
 
 					<div className={styles.el}>
-						<a
-							href="https://maps.app.goo.gl/xeZxjjX8fh2jLzEQ8"
-							target="_blank"
-						>
+						<a href="https://maps.app.goo.gl/xeZxjjX8fh2jLzEQ8" target="_blank">
 							Venir
 						</a>
 						<div className={styles.indicator}></div>
