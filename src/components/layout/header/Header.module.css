@@ -1,18 +1,19 @@
 .header {
-	width: 95vw;
-	max-width: 1920px;
+	width: 100%;
 	margin-inline: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 2rem 4rem;
+	padding: 2rem 12rem;
+	position: absolute;
+	top: 0;
 
-	@media (width > 1720px) {
-		width: 80vw;
+	@media (width < 1540px) {
+		padding-inline: 2rem;
 	}
 
-	@media (width < 1024px) {
-		padding-block: 2rem 0;
+	@media (width < 768px) {
+		padding-inline: 1rem;
 	}
 }
 
