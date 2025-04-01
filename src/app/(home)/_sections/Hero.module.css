@@ -60,7 +60,7 @@
 
 		@media (width < 480px) {
 			text-align: left;
-			font-size: clamp(5rem, 0.15rem + 24.5vw, 7.75rem);
+			font-size: clamp(5.35625rem, -0.4571rem + 27.3571vw, 7.75rem);
 		}
 	}
 
