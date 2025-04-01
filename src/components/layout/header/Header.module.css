@@ -5,23 +5,19 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-block: 2rem;
-}
+	padding-block: 2rem 4rem;
 
-@media (width > 1720px) {
-	.header {
+	@media (width > 1720px) {
 		width: 80vw;
+	}
+
+	@media (width < 1024px) {
+		padding-block: 2rem 0;
 	}
 }
 
 .logo {
-	width: 175px;
-}
-
-@media (width < 480px) {
-	.logo {
-		width: 150px;
-	}
+	width: clamp(9.375rem, 9.1357rem + 1.1261vw, 10.9375rem);
 }
 
 .nav {
@@ -30,10 +26,8 @@
 	display: flex;
 	align-items: center;
 	gap: 4rem;
-}
 
-@media (width < 760px) {
-	.nav {
+	@media (width < 760px) {
 		display: none;
 	}
 }
