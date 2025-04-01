@@ -1,14 +1,14 @@
 .header {
-	width: 100%;
-	margin-inline: auto;
+	width: 80%;
+	position: absolute;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 12rem;
-	position: absolute;
-	top: 0;
+	padding-block: 2rem;
 
 	@media (width < 1540px) {
+		width: 100%;
 		padding-inline: 2rem;
 	}
 

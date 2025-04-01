@@ -1,11 +1,11 @@
 .about {
+	width: 100%;
 	font-family: var(--font-poppins);
 	display: flex;
 	justify-content: center;
 }
 
 .aboutContent {
-	width: 95%;
 	display: flex;
 
 	@media (width > 1720px) {

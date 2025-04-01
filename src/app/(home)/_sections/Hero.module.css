@@ -2,7 +2,7 @@
 	height: 100svh;
 	width: 100%;
 	margin-inline: auto;
-	margin-top: 5rem;
+	padding-block: 5rem;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
