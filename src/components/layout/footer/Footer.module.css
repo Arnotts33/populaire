@@ -23,7 +23,7 @@
 	width: 100%;
 	box-sizing: border-box;
 
-	@media (width < 540px) {
+	@media (width < 720px) {
 		padding: 2rem 1rem 1rem 1rem;
 		gap: 2.5rem;
 	}
@@ -61,7 +61,7 @@
 	}
 }
 
-@media (width < 540px) {
+@media (width < 720px) {
 	.footerButtons {
 		flex-direction: column;
 		gap: 2rem;
@@ -108,8 +108,8 @@
 		font-family: var(--font-necto-mono);
 	}
 
-	@media (width < 540px) {
-		gap: 1.5rem;
+	@media (width < 720px) {
+		gap: 2rem;
 		flex-direction: column;
 	}
 
@@ -124,7 +124,7 @@
 		line-height: 1;
 	}
 
-	@media (width > 540px) {
+	@media (width > 720px) {
 		.instaLogo {
 			position: absolute;
 			bottom: 0;
