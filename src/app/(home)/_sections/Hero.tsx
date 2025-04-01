@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroImg from "@/assets/images/dorian-kitchen3.webp";
+import heroImg from "@/assets/images/dorian-kitchen2.webp";
 import styles from "./Hero.module.css";
 
 const Hero = () => {

@@ -115,10 +115,36 @@
 
 .burgerActive {
 	&::after {
+		animation: downward 0.3s ease-in-out;
 		transform: translateY(4px) rotate(45deg);
 	}
 
 	&::before {
+		animation: upward 0.3s ease-in-out;
+		transform: translateY(-4px) rotate(-45deg);
+	}
+}
+
+@keyframes downward {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(4px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(4px) rotate(45deg);
+	}
+}
+
+@keyframes upward {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-4px) rotate(0deg);
+	}
+	100% {
 		transform: translateY(-4px) rotate(-45deg);
 	}
 }

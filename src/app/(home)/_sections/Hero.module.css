@@ -1,8 +1,9 @@
 .hero {
 	height: 100svh;
-	width: 100%;
-	margin-inline: auto;
+	width: 65%;
+	margin: 4rem auto;
 	padding-block: 5rem;
+	padding-inline: 2rem;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -11,12 +12,7 @@
 	gap: 0.5rem;
 
 	@media (width < 1540px) {
-		justify-content: center;
-		padding-inline: 2rem;
-	}
-
-	@media (width > 1540px) {
-		width: 65%;
+		width: 100%;
 	}
 
 	@media (width < 768px) {
