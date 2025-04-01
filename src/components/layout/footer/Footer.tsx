@@ -19,7 +19,6 @@ const Footer = () => {
 			<Image
 				src={footerPattern}
 				alt="Footer checkered pattern"
-				layout="intrinsic"
 				className={styles.footerPattern}
 			/>
 			<div className={styles.footerContent}>
@@ -35,7 +34,6 @@ const Footer = () => {
 										<Link
 											key={index}
 											href={item.href}
-											// target={item.target}
 											onClick={(event) =>
 												handleNavigation(event, item, pathname, router)
 											}
