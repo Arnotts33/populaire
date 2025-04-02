@@ -11,7 +11,7 @@
 
 .marqueeInner {
 	display: flex;
-	width: fit-content;
+	width: max-content;
 	flex: auto;
 	flex-direction: row;
 }

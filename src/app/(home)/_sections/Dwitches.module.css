@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* position: relative; */
 	padding-block: 5rem;
 }
 
@@ -21,7 +20,7 @@
 
 .dwitchesContent {
 	display: grid;
-	grid-template-columns: repeat(8, minmax(172px, 1fr));
+	grid-template-columns: repeat(8, minmax(120px, 1fr));
 	grid-template-rows: repeat(6, minmax(172px, 1fr));
 	grid-template-areas:
 		". . . . dwitch dwitch dwitch dwitch"
@@ -63,24 +62,18 @@
 .albumCover {
 	grid-area: album;
 	position: relative;
+	display: flex;
+
+	@media (width < 1280px) {
+		align-self: flex-end;
+	}
 
 	img {
 		width: 100%;
 		max-width: 200px;
 		height: auto;
+		align-self: flex-end;
 	}
-}
-
-.keywordsChain {
-	width: 600%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 1rem;
-	font-size: 2rem;
-	font-family: var(--font-necto-mono);
-	text-transform: uppercase;
-	overflow: hidden;
 }
 
 .dwitchImageContainer {
@@ -92,7 +85,6 @@
 
 	img {
 		width: 100%;
-
 		height: auto;
 		object-fit: cover;
 	}
@@ -104,9 +96,8 @@
 
 	h1 {
 		font-family: var(--font-bebas-neue);
-		/* font-size: clamp(7.25rem, 6.2286rem + 4.1905vw, 10rem); */
-		font-size: clamp(7.25rem, 5rem + 4vw, 14rem);
-		/* font-size: 14rem; */
+		font-size: clamp(7rem, 2.3333rem + 7.2917vw, 14rem);
+		/* font-size: 112px; */
 
 		font-weight: 400;
 		display: flow-root;
@@ -127,7 +118,6 @@
 
 .text {
 	grid-area: text;
-	/* max-width: 85%; */
 	margin-top: 2rem;
 	font-size: clamp(1rem, 0.75em + 0.65vw, 1.75rem);
 	line-height: 2.25;
