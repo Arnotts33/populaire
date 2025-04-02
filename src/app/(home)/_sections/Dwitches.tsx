@@ -7,16 +7,15 @@ import ScrollingKeywords from "@/components/ui/ScrollingKeywords";
 const Dwitches = () => {
 	return (
 		<section className={styles.dwitchesSection} id="dwitches">
-			<div className={styles.keywordsChain}>
-				<ScrollingKeywords />
-				<ScrollingKeywords />
-			</div>
-
 			<div className={styles.dwitchesContent}>
 				<div className={styles.title}>
 					<h1 className={styles.titleText}>Dwitches</h1>
 				</div>
 				<div className={styles.albumCover}>
+					<div className={styles.keywordsChain}>
+						<ScrollingKeywords />
+						<ScrollingKeywords />
+					</div>
 					<Image
 						src={daftpunk}
 						alt="Daft Punk album cover"

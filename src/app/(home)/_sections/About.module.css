@@ -3,6 +3,7 @@
 	font-family: var(--font-poppins);
 	display: flex;
 	justify-content: center;
+	padding-bottom: 5rem;
 }
 
 .aboutContent {
