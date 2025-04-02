@@ -5,7 +5,7 @@ import mascotte from "@/assets/images/mascotte.svg";
 
 const About = () => {
 	return (
-		<section className={styles.about} id="about">
+		<section className={styles.aboutSection} id="about">
 			<div className={styles.aboutContent}>
 				<div className={styles.contentRightSide}>
 					<p>
