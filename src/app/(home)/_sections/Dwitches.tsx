@@ -7,6 +7,9 @@ const Dwitches = () => {
 	return (
 		<section className={styles.dwitchesSection} id="dwitches">
 			<div className={styles.dwitchesContent}>
+				<div className={styles.title}>
+					<h1 className={styles.titleText}>Dwitches</h1>
+				</div>
 				<div className={styles.keywordsChain}>
 					<p>
 						grilled cheese • smash • tacos • bao • baguette • grilled cheese
@@ -26,12 +29,9 @@ const Dwitches = () => {
 						src={sandwich}
 						alt="Grilled cheese sandwich"
 						className={styles.dwitchImage}
-						width={600}
+						width={688}
 						height={800}
 					/>
-				</div>
-				<div className={styles.title}>
-					<h1 className={styles.titleText}>Dwitches</h1>
 				</div>
 				<div className={styles.text}>
 					<p>
