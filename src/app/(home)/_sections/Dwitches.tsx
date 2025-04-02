@@ -1,6 +1,6 @@
 import styles from "./Dwitches.module.css";
-import sandwich from "@/assets/images/grilled-cheese.webp";
-import daftpunk from "@/assets/images/daftpunk.webp";
+import sandwich from "@/assets/images/grilled-cheese2.webp";
+import daftpunk from "@/assets/images/dp.webp";
 import Image from "next/image";
 import ScrollingKeywords from "@/components/ui/ScrollingKeywords";
 
@@ -21,7 +21,6 @@ const Dwitches = () => {
 						src={daftpunk}
 						alt="Daft Punk album cover"
 						className={styles.albumCoverimage}
-						width={160}
 					/>
 				</div>
 				<div className={styles.dwitchImageContainer}>
@@ -29,8 +28,6 @@ const Dwitches = () => {
 						src={sandwich}
 						alt="Grilled cheese sandwich"
 						className={styles.dwitchImage}
-						width={688}
-						height={800}
 					/>
 				</div>
 				<div className={styles.text}>
