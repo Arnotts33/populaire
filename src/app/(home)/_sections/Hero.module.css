@@ -18,6 +18,10 @@
 	@media (width <= 768px) {
 		padding-inline: 1rem;
 	}
+
+	@media (width <= 640px) {
+		padding-bottom: 2rem;
+	}
 }
 
 .heroImg {
