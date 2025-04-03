@@ -9,7 +9,7 @@ const Dwitches = () => {
 		<section className={styles.dwitchesSection} id="dwitches">
 			<div className={styles.content}>
 				<div className={styles.topContent}>
-					<div className={styles.leftSide}>
+					<div className={styles.titleContainer}>
 						<div className={styles.album}>
 							<Image
 								src={daftpunk}

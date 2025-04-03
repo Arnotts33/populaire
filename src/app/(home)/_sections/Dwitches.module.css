@@ -6,7 +6,7 @@
 
 .content {
 	padding: 5rem 2rem;
-	padding-left: clamp(2rem, -6.6667rem + 18.0556vw, 15rem);
+	padding-left: clamp(2rem, -4.5rem + 16.25vw, 15rem);
 	max-width: 1920px;
 	display: flex;
 	flex-direction: column;
@@ -15,7 +15,7 @@
 	margin: 0 auto;
 	gap: clamp(1rem, -0.5rem + 3.75vw, 4rem);
 
-	@media (width < 768px) {
+	@media (width <= 768px) {
 		padding: 5rem 1rem;
 	}
 }
@@ -24,68 +24,98 @@
 	width: 100%;
 	display: flex;
 	gap: clamp(2rem, 0.5rem + 3.75vw, 5rem);
-}
 
-.leftSide {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	gap: clamp(9rem, 1rem + 20vw, 25rem);
-}
-
-.album {
-	width: fit-content;
-	display: flex;
-
-	img {
-		width: 100%;
-		max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
-		height: auto;
-		object-fit: cover;
-		align-self: flex-end;
+	@media (width <= 640px) {
+		flex-direction: column;
 	}
-}
 
-.title {
-	width: fit-content;
+	.titleContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: clamp(9rem, 1rem + 20vw, 25rem);
 
-	h1 {
-		font-size: clamp(5rem, -1rem + 12.5vw, 14rem);
-
-		font-weight: 400;
-		display: flow-root;
-
-		&::before {
-			content: "";
-			display: table;
-			margin-bottom: calc(-0.5lh + 0.41em);
+		@media (width <= 640px) {
+			gap: 2rem;
 		}
 
-		&::after {
-			content: "";
-			display: table;
-			margin-bottom: calc(-0.53lh + 0.35em);
+		.album {
+			width: fit-content;
+			display: flex;
+			order: 1;
+
+			@media (width <= 640px) {
+				order: 2;
+				margin-left: 4rem;
+			}
+
+			img {
+				width: 100%;
+				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
+				height: auto;
+				object-fit: cover;
+				align-self: flex-end;
+			}
+		}
+
+		.title {
+			width: fit-content;
+			order: 2;
+
+			@media (width <= 640px) {
+				order: 1;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: clamp(5rem, -1rem + 12.5vw, 14rem);
+				font-weight: 400;
+				display: flow-root;
+
+				&::before {
+					content: "";
+					display: table;
+					margin-bottom: calc(-0.5lh + 0.41em);
+				}
+
+				&::after {
+					content: "";
+					display: table;
+					margin-bottom: calc(-0.53lh + 0.35em);
+				}
+
+				@media (width <= 640px) {
+					font-size: clamp(6.25rem, -0.8333rem + 33.3333vw, 12.5rem);
+					text-align: center;
+				}
+			}
 		}
 	}
-}
 
-.imageContainer {
-	flex: 1;
-	display: flex;
+	.imageContainer {
+		flex: 1;
+		display: flex;
 
-	img {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		align-self: flex-end;
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			align-self: flex-end;
+		}
 	}
 }
 
 .bottomContent {
 	p {
 		width: 80%;
-		font-size: clamp(1rem, 0.487rem + 1.126vw, 1.75rem);
+		font-size: clamp(1.25rem, 1rem + 0.625vw, 1.75rem);
+		text-wrap: balance;
 		line-height: 2.25;
+
+		@media (width <= 640px) {
+			width: 100%;
+			font-size: clamp(1rem, 0.7167rem + 1.3333vw, 1.25rem);
+		}
 	}
 }
 
