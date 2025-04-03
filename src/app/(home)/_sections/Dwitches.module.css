@@ -7,6 +7,7 @@
 	justify-content: center;
 	align-items: center;
 	padding-block: 5rem;
+	overflow: hidden;
 }
 
 .keywordsChain {
@@ -14,17 +15,18 @@
 	flex-direction: column;
 	gap: 1rem;
 	position: absolute;
-	left: -500px;
+	/* left: -500px; */
 	top: 50px;
 }
 
 .dwitchesContent {
+	max-width: 1976px;
 	display: grid;
 	grid-template-columns: repeat(8, minmax(120px, 1fr));
-	grid-template-rows: repeat(6, minmax(172px, 1fr));
+	grid-template-rows: minmax(120px, auto);
 	grid-template-areas:
-		". . . . dwitch dwitch dwitch dwitch"
 		". album . . dwitch dwitch dwitch dwitch"
+		". . . . dwitch dwitch dwitch dwitch"
 		". . . . dwitch dwitch dwitch dwitch"
 		". title title title dwitch dwitch dwitch dwitch"
 		". text text text text text . . "
@@ -63,6 +65,8 @@
 	grid-area: album;
 	position: relative;
 	display: flex;
+	aspect-ratio: 1 / 1;
+	margin-top: 4rem;
 
 	@media (width < 1280px) {
 		align-self: flex-end;
@@ -72,7 +76,8 @@
 		width: 100%;
 		max-width: 200px;
 		height: auto;
-		align-self: flex-end;
+		position: absolute;
+		top: 0px;
 	}
 }
 
@@ -81,18 +86,22 @@
 	width: 100%;
 	max-width: 900px;
 	justify-self: end;
-	align-self: self-end;
+	align-self: center;
+	overflow: hidden;
+	aspect-ratio: 1 / 1;
 
 	img {
 		width: 100%;
 		height: auto;
 		object-fit: cover;
+		overflow: hidden;
 	}
 }
 
 .title {
 	grid-area: title;
 	align-self: self-end;
+	width: fit-content;
 
 	h1 {
 		font-family: var(--font-bebas-neue);

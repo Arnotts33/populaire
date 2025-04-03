@@ -74,7 +74,8 @@
 
 .footerTitle h1 {
 	font-family: var(--font-bebas-neue);
-	font-size: clamp(6.25rem, -0.231rem + 30.1444vw, 48rem);
+	/* font-size: clamp(6.25rem, -0.231rem + 30.1444vw, 48rem); */
+	font-size: 5rem;
 	font-weight: 400;
 	text-align: center;
 	overflow: hidden;

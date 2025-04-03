@@ -1,7 +1,7 @@
 .hero {
 	height: 100svh;
 	width: 65%;
-	margin: 4rem auto;
+	margin: 0 auto;
 	padding-block: 5rem;
 	padding-inline: 2rem;
 	overflow: hidden;
@@ -40,13 +40,13 @@
 		&::before {
 			content: "";
 			display: table;
-			margin-bottom: calc(-0.5lh + 0.41em);
+			margin-bottom: calc(-0.48lh + 0.41em);
 		}
 
 		&::after {
 			content: "";
 			display: table;
-			margin-bottom: calc(-0.5lh + 0.36em);
+			margin-bottom: calc(-0.51lh + 0.36em);
 		}
 	}
 
@@ -56,7 +56,7 @@
 
 		@media (width < 480px) {
 			text-align: left;
-			font-size: clamp(5.35625rem, -0.4571rem + 27.3571vw, 7.75rem);
+			font-size: clamp(4.85rem, -0.4571rem + 27.1571vw, 7.75rem);
 		}
 	}
 
