@@ -1,8 +1,8 @@
 .hero {
 	height: 100svh;
-	width: 65%;
+	width: 100%;
 	margin: 0 auto;
-	padding-block: 6.5rem 5rem;
+	padding-block: 10rem 5rem;
 	padding-inline: 2rem;
 	overflow: hidden;
 	display: flex;
@@ -11,18 +11,18 @@
 	justify-content: center;
 	gap: 0.5rem;
 
-	@media (width < 1540px) {
-		width: 100%;
+	@media (width > 1536px) {
+		max-width: 1536px;
 	}
 
-	@media (width < 768px) {
+	@media (width <= 768px) {
 		padding-inline: 1rem;
 	}
 }
 
 .heroImg {
 	width: 100%;
-	height: 70%;
+	height: 75%;
 	object-fit: cover;
 }
 
@@ -54,9 +54,9 @@
 		font-family: var(--font-bebas-neue);
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
 
-		@media (width < 480px) {
+		@media (width <= 475px) {
 			text-align: left;
-			font-size: clamp(4.85rem, -0.4571rem + 27.1571vw, 7.75rem);
+			font-size: clamp(5.25rem, -0.5426rem + 27.2593vw, 7.55rem);
 		}
 	}
 

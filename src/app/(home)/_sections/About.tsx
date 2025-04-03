@@ -7,7 +7,7 @@ const About = () => {
 	return (
 		<section className={styles.aboutSection} id="about">
 			<div className={styles.aboutContent}>
-				<div className={styles.contentRightSide}>
+				<div className={styles.contentLeftSide}>
 					<p>
 						Ici, on fait des sandwichs costauds: du goût, des produits frais, et
 						des inspirations venues d’un périple aux 4 coins du globe. Chaque
@@ -15,7 +15,7 @@ const About = () => {
 						bon.
 					</p>
 				</div>
-				<div className={styles.contentLeftSide}>
+				<div className={styles.contentRightSide}>
 					<div className={styles.openingTimes}>
 						<OpeningTimes />
 					</div>

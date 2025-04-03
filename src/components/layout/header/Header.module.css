@@ -1,7 +1,6 @@
 .header {
 	width: 100%;
 	padding-inline: 2rem;
-
 	position: absolute;
 	top: 0;
 	display: flex;
@@ -9,11 +8,11 @@
 	align-items: center;
 	padding-block: 2rem;
 
-	@media (width > 1540px) {
-		width: 80%;
+	@media (width > 1536px) {
+		max-width: 1840px;
 	}
 
-	@media (width < 768px) {
+	@media (width <= 768px) {
 		padding-inline: 1rem;
 	}
 }
