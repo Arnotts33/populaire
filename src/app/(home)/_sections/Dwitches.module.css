@@ -1,21 +1,101 @@
 .dwitchesSection {
 	width: 100%;
-	min-height: 100dvh;
 	font-family: var(--font-poppins);
+	overflow: hidden;
+}
+
+.content {
+	padding: 5rem 2rem;
+	padding-left: clamp(2rem, -6.6667rem + 18.0556vw, 15rem);
+	max-width: 1920px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-block: 5rem;
-	overflow: hidden;
+	margin: 0 auto;
+	gap: clamp(1rem, -0.5rem + 3.75vw, 4rem);
+
+	@media (width < 768px) {
+		padding: 5rem 1rem;
+	}
 }
 
-.keywordsChain {
+.topContent {
+	width: 100%;
+	display: flex;
+	gap: clamp(2rem, 0.5rem + 3.75vw, 5rem);
+}
+
+.leftSide {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: clamp(9rem, 1rem + 20vw, 25rem);
+}
+
+.album {
+	width: fit-content;
+	display: flex;
+
+	img {
+		width: 100%;
+		max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
+		height: auto;
+		object-fit: cover;
+		align-self: flex-end;
+	}
+}
+
+.title {
+	width: fit-content;
+
+	h1 {
+		font-size: clamp(5rem, -1rem + 12.5vw, 14rem);
+
+		font-weight: 400;
+		display: flow-root;
+
+		&::before {
+			content: "";
+			display: table;
+			margin-bottom: calc(-0.5lh + 0.41em);
+		}
+
+		&::after {
+			content: "";
+			display: table;
+			margin-bottom: calc(-0.53lh + 0.35em);
+		}
+	}
+}
+
+.imageContainer {
+	flex: 1;
+	display: flex;
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		align-self: flex-end;
+	}
+}
+
+.bottomContent {
+	p {
+		width: 80%;
+		font-size: clamp(1rem, 0.487rem + 1.126vw, 1.75rem);
+		line-height: 2.25;
+	}
+}
+
+/* GRID LAYOUT */
+
+/* .keywordsChain {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	position: absolute;
-	/* left: -500px; */
 	top: 50px;
 }
 
@@ -106,7 +186,6 @@
 	h1 {
 		font-family: var(--font-bebas-neue);
 		font-size: clamp(7rem, 2.3333rem + 7.2917vw, 14rem);
-		/* font-size: 112px; */
 
 		font-weight: 400;
 		display: flow-root;
@@ -130,4 +209,4 @@
 	margin-top: 2rem;
 	font-size: clamp(1rem, 0.75em + 0.65vw, 1.75rem);
 	line-height: 2.25;
-}
+} */

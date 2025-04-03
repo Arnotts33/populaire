@@ -3,20 +3,18 @@
 	font-family: var(--font-poppins);
 	display: flex;
 	justify-content: center;
-	padding-bottom: 5rem;
 }
 
 .aboutContent {
+	width: 100%;
+	max-width: 1920px;
 	display: flex;
+	justify-content: center;
+	padding: 5rem 2rem;
 
-	@media (width > 1540px) {
+	/* @media (width > 1540px) {
 		width: 80%;
-	}
-
-	@media (width < 1540px) {
-		justify-content: center;
-		padding-inline: 2rem;
-	}
+	} */
 
 	@media (width < 1024px) {
 		flex-direction: column;
@@ -49,14 +47,14 @@
 		gap: 4rem;
 	}
 
-	@media (width < 1024px) and (width > 720px) {
+	@media (width < 1024px) and (width > 640px) {
 		flex-direction: row;
 		width: 100%;
-		gap: 12rem;
+		justify-content: space-between;
 		align-items: center;
 	}
 
-	@media (width < 720px) {
+	@media (width < 640px) {
 		gap: 0;
 		width: 100%;
 		align-items: flex-start;
