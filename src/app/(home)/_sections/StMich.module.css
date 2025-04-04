@@ -1,3 +1,18 @@
-.stMich {
-	min-height: 100vh;
+.stMichSection {
+	width: 100%;
+	font-family: var(--font-poppins);
+	overflow: hidden;
+}
+
+.stMichContent {
+	padding: 5rem 2rem;
+	max-width: 1920px;
+
+	/* @media (width <= 768px) {
+    padding: 4rem 1rem;
+  }
+
+  @media (width <= 640px) {
+    padding: 2rem 1rem;
+  } */
 }

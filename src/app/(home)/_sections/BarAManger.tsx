@@ -32,7 +32,8 @@ const BarAManger = () => {
 					<p className={styles.descriptionText}>
 						Ici, on partage des assiettes bien senties et des vins qui claquent.
 						Du bon produit, du goût, une cuisine qui va à l’essentiel. Un bar à
-						manger où tu viens grignoter, trinquer, traîner.
+						manger où tu viens avec les copains, la famille, pour grignoter,
+						trinquer, traîner.
 					</p>
 				</div>
 			</div>
