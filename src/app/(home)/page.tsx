@@ -14,7 +14,7 @@ export default function Home() {
 			<About />
 			<Dwitches />
 			<Gallery />
-			{/* <BarAManger /> */}
+			<BarAManger />
 			{/* <StMich /> */}
 		</>
 	);

@@ -21,22 +21,25 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media (width <= 768px) {
+		@media (width <= 640px) {
 			flex-direction: column;
 			align-items: center;
 			gap: 2rem;
 		}
 
 		img {
-			width: clamp(13.75rem, -2.083rem + 32.986vi, 37.5rem);
+			width: clamp(14.375rem, -1.042rem + 32.118vi, 37.5rem);
 			height: auto;
 
 			@media (width <= 768px) {
+				width: clamp(12.188rem, -1.875rem + 35.156vi, 15rem);
+			}
+
+			@media (width <= 640px) {
 				width: 100%;
 				aspect-ratio: 1/1;
 				object-fit: cover;
 				object-position: center;
-				max-width: 100%;
 			}
 		}
 	}
@@ -44,7 +47,7 @@
 
 .panelContainer {
 	position: sticky;
-	top: 8rem;
+	top: 6rem;
 	z-index: 10;
 	width: 100%;
 	display: flex;
