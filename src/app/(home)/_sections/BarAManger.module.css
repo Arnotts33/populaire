@@ -1,3 +1,139 @@
-.barAManger {
-	min-height: 100vh;
+.barAMangerSection {
+	width: 100%;
+	font-family: var(--font-poppins);
+	overflow: hidden;
+}
+
+.barAMangerContent {
+	padding: 5rem 2rem;
+	padding-right: clamp(2rem, -4.5rem + 16.25vw, 15rem);
+	max-width: 1920px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	gap: clamp(1rem, -0.5rem + 3.75vw, 4rem);
+
+	@media (width <= 768px) {
+		padding: 4rem 1rem;
+	}
+
+	@media (width <= 640px) {
+		padding: 2rem 1rem;
+	}
+}
+
+.topContent {
+	width: 100%;
+	display: flex;
+	gap: clamp(2rem, 0.5rem + 3.75vw, 5rem);
+
+	@media (width <= 640px) {
+		flex-direction: column;
+	}
+
+	.titleContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: clamp(9rem, 1rem + 20vw, 25rem);
+
+		@media (width <= 640px) {
+			gap: 2rem;
+		}
+
+		.album {
+			width: fit-content;
+			align-self: flex-end;
+			display: flex;
+			order: 1;
+
+			@media (width <= 768px) {
+				margin-left: 2rem;
+			}
+
+			@media (width <= 640px) {
+				order: 2;
+				margin-left: 4rem;
+			}
+
+			img {
+				width: 100%;
+				aspect-ratio: 1/1;
+				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
+				height: auto;
+				object-fit: cover;
+				align-self: flex-end;
+			}
+		}
+
+		.title {
+			width: fit-content;
+			order: 2;
+
+			@media (width <= 640px) {
+				order: 1;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: clamp(3.5rem, 0.445rem + 7.6375vw, 9.61rem);
+				font-weight: 400;
+				display: flow-root;
+
+				&::before {
+					content: "";
+					display: table;
+					margin-bottom: calc(-0.5lh + 0.41em);
+				}
+
+				&::after {
+					content: "";
+					display: table;
+					margin-bottom: calc(-0.53lh + 0.35em);
+				}
+
+				@media (width <= 640px) {
+					font-size: clamp(4.25rem, -0.5667rem + 22.6667vw, 8.5rem);
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.imageContainer {
+		flex: 1;
+		display: flex;
+
+		@media (width <= 640px) {
+			order: 3;
+		}
+
+		img {
+			width: 100%;
+			aspect-ratio: 1/1;
+			height: auto;
+			object-fit: cover;
+			object-position: bottom;
+			align-self: flex-end;
+		}
+	}
+}
+
+.bottomContent {
+	p {
+		width: 80%;
+		font-size: clamp(1.25rem, 1rem + 0.625vw, 1.75rem);
+		text-wrap: balance;
+		line-height: 2;
+		text-align: right;
+		justify-self: flex-end;
+
+		@media (width <= 640px) {
+			width: 100%;
+			font-size: clamp(1rem, 0.7167rem + 1.3333vw, 1.25rem);
+			text-align: left;
+		}
+	}
 }

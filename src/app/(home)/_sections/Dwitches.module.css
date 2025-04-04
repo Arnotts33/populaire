@@ -118,7 +118,7 @@
 		width: 80%;
 		font-size: clamp(1.25rem, 1rem + 0.625vw, 1.75rem);
 		text-wrap: balance;
-		line-height: 2.25;
+		line-height: 2;
 
 		@media (width <= 640px) {
 			width: 100%;
