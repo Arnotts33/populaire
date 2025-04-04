@@ -8,10 +8,10 @@ import Image from "next/image";
 const Gallery = () => {
 	return (
 		<section className={styles.gallerySection} id="gallery">
+			<div className={styles.panelContainer}>
+				<ButterPanel />
+			</div>
 			<div className={styles.galleryContent}>
-				<div className={styles.panelContainer}>
-					<ButterPanel />
-				</div>
 				<div className={styles.galleryImagesContainer}>
 					<Image
 						src={counterDwitch}
@@ -35,6 +35,7 @@ const Gallery = () => {
 					/>
 				</div>
 			</div>
+			<div className={styles.bottomSpacer}></div>
 		</section>
 	);
 };
