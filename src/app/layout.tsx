@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { poppins, bebasNeue, nectoMono } from "@/assets/fonts/fonts";
+import {
+	poppins,
+	bebasNeue,
+	nectoMono,
+	abrilFatface,
+} from "@/assets/fonts/fonts";
 import "../styles/globals.css";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
@@ -22,7 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${poppins.variable} ${bebasNeue.variable} ${nectoMono.variable}`}
+				className={`${poppins.variable} ${bebasNeue.variable} ${nectoMono.variable} ${abrilFatface.variable}`}
 			>
 				<Header />
 				<main>{children}</main>

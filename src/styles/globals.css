@@ -1,10 +1,9 @@
-/* VARIABLES */
-
-:root {
+VARIABLES :root {
 	/* FONTS */
 	--font-poppins: var(--font-poppins);
 	--font-bebas-neue: var(--font-bebas-neue);
 	--font-necto-mono: var(--font-necto-mono);
+	--font-abril-fatface: var(--font-abril-fatface);
 }
 
 /* SCROLL BLOCK WHEN MODAL OPEN */
