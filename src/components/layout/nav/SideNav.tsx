@@ -4,7 +4,7 @@ import styles from "./SideNav.module.css";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import mascotte from "@/assets/images/mascotte-animate.gif";
 import { useHandleNavigation } from "@/utils/useHandleNavigation";
 import Image from "next/image";
@@ -13,7 +13,6 @@ import { navItems } from "@/constants/navItems";
 const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 	const pathname = usePathname();
 	const handleNavigation = useHandleNavigation(pathname, toggleMenu);
-	const router = useRouter();
 
 	return (
 		<motion.div

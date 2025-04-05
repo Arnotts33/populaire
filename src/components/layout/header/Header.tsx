@@ -19,7 +19,6 @@ const Header = () => {
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
 	const handleNavigation = useHandleNavigation(pathname);
-	const router = useRouter();
 
 	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
 	useEffect(() => {
