@@ -6,12 +6,13 @@ import { menuSlide, slide } from "./animation";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import mascotte from "@/assets/images/mascotte-animate.gif";
-import { handleNavigation } from "@/utils/handleNavigation";
+import { useHandleNavigation } from "@/utils/useHandleNavigation";
 import Image from "next/image";
 import { navItems } from "@/constants/navItems";
 
 const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 	const pathname = usePathname();
+	const handleNavigation = useHandleNavigation(pathname, toggleMenu);
 	const router = useRouter();
 
 	return (
@@ -40,9 +41,7 @@ const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 							>
 								<Link
 									href={item.href}
-									onClick={(event) =>
-										handleNavigation(event, item, pathname, router, toggleMenu)
-									}
+									onClick={(event) => handleNavigation(event, item)}
 									className={styles.link}
 								>
 									{item.title}

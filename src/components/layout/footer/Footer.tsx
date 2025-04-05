@@ -6,12 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import footerPattern from "@/assets/images/footer-pattern.svg";
 import { navItems } from "@/constants/navItems";
-import { handleNavigation } from "@/utils/handleNavigation";
+import { useHandleNavigation } from "@/utils/useHandleNavigation";
 import instagramIcon from "@/assets/icons/instagram.svg";
 import OpeningTimes from "@/components/ui/OpeningTimes";
 
 const Footer = () => {
 	const pathname = usePathname();
+	const handleNavigation = useHandleNavigation(pathname);
 	const router = useRouter();
 
 	return (
@@ -34,9 +35,7 @@ const Footer = () => {
 										<Link
 											key={index}
 											href={item.href}
-											onClick={(event) =>
-												handleNavigation(event, item, pathname, router)
-											}
+											onClick={(event) => handleNavigation(event, item)}
 											className={styles.footerLink}
 										>
 											{item.title}
@@ -56,9 +55,7 @@ const Footer = () => {
 							<Link
 								key={index}
 								href={item.href}
-								onClick={(event) =>
-									handleNavigation(event, item, pathname, router)
-								}
+								onClick={(event) => handleNavigation(event, item)}
 								className={styles.button}
 							>
 								{item.title}
