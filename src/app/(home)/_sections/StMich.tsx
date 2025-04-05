@@ -27,15 +27,16 @@ const StMich = () => {
 
 	const images = [
 		{ src: window, y: sm, rotate: 0 },
-		{ src: joPlonge, y: sm, rotate: -3 },
-		{ src: dorianPorchetta, y: lg, rotate: -5 },
-		{ src: jujuCams, y: lg, rotate: 5 },
-		{ src: wineFriends, y: lg, rotate: -6 },
+		{ src: joPlonge, y: md, rotate: -3 },
+		{ src: dorianPorchetta, y: md, rotate: 3 },
+		{ src: jujuCams, y: lg, rotate: -5 },
+		{ src: wineFriends, y: lg, rotate: 6 },
+		{ src: dorianSom, y: md, rotate: 3 },
 	];
 
 	return (
 		<section ref={section} className={styles.stMichSection} id="st-mich">
-			<div className={styles.stMichcontent}>
+			<div className={styles.stMichContent}>
 				<div className={styles.title}>
 					<h1>St Mich</h1>
 				</div>
@@ -48,7 +49,7 @@ const StMich = () => {
 								key={`i_${i}`}
 								className={styles.imageContainer}
 							>
-								<Image src={src} alt="image" fill />
+								<Image src={src} alt="image" />
 							</motion.div>
 						);
 					})}

@@ -119,27 +119,6 @@ const Header = () => {
 								);
 							})}
 					</ul>
-					{/* <div className={styles.el}>
-						<Link href="/#dwitches">Dwitches</Link>
-						<div className={styles.indicator}></div>
-					</div>
-
-					<div className={styles.el}>
-						<Link href="/#bar-a-manger">Bar à Manger</Link>
-						<div className={styles.indicator}></div>
-					</div>
-
-					<div className={styles.el}>
-						<Link href="/contact">Contact</Link>
-						<div className={styles.indicator}></div>
-					</div>
-
-					<div className={styles.el}>
-						<a href="https://maps.app.goo.gl/xeZxjjX8fh2jLzEQ8" target="_blank">
-							Venir
-						</a>
-						<div className={styles.indicator}></div>
-					</div> */}
 				</nav>
 
 				{/* Burger Menu on Small Devices */}

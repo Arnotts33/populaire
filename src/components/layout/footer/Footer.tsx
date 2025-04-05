@@ -1,5 +1,4 @@
 "use client";
-
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./Footer.module.css";
 import Image from "next/image";
