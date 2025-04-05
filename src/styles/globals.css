@@ -22,7 +22,6 @@ VARIABLES :root {
 /* Pour Firefox */
 html {
 	scrollbar-width: none;
-	scroll-behavior: smooth;
 }
 
 /* GLOBAL STYLES */

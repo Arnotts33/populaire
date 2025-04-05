@@ -2,13 +2,15 @@
 import Image from "next/image";
 import logoImg from "@/assets/images/logo-header.svg";
 import styles from "./Header.module.css";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { cubicBezier, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import { useHandleNavigation } from "@/utils/useHandleNavigation";
+import { navItems } from "@/constants/navItems";
 import SideNav from "../nav/SideNav";
 import Link from "next/link";
 
@@ -16,6 +18,8 @@ const Header = () => {
 	const button = useRef<HTMLDivElement>(null);
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
+	const handleNavigation = useHandleNavigation(pathname);
+	const router = useRouter();
 
 	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
 	useEffect(() => {
@@ -96,8 +100,26 @@ const Header = () => {
 					</Link>
 				</div>
 
-				<nav className={styles.nav}>
-					<div className={styles.el}>
+				<nav>
+					<ul className={styles.nav}>
+						{navItems
+							.filter((item) => item.title !== "Accueil")
+							.map((item, index) => {
+								return (
+									<li key={index} className={styles.el}>
+										<Link
+											key={index}
+											href={item.href}
+											onClick={(event) => handleNavigation(event, item)}
+										>
+											{item.title}
+										</Link>
+										<div className={styles.indicator}></div>
+									</li>
+								);
+							})}
+					</ul>
+					{/* <div className={styles.el}>
 						<Link href="/#dwitches">Dwitches</Link>
 						<div className={styles.indicator}></div>
 					</div>
@@ -117,7 +139,7 @@ const Header = () => {
 							Venir
 						</a>
 						<div className={styles.indicator}></div>
-					</div>
+					</div> */}
 				</nav>
 
 				{/* Burger Menu on Small Devices */}
