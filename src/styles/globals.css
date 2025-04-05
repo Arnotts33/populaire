@@ -8,8 +8,16 @@ VARIABLES :root {
 
 /* SCROLL BLOCK WHEN MODAL OPEN */
 
-:root:has(.no-doc-scroll) {
-	overflow: hidden;
+body.no-doc-scroll {
+	overflow: hidden !important;
+	touch-action: none;
+	/* Prevent content shifting when scrollbar disappears */
+	padding-right: var(--scrollbar-width, 0px);
+	/* Ensures iOS respects the scroll lock */
+	position: fixed;
+	width: 100%;
+	/* Maintain the scroll position */
+	height: 100%;
 }
 
 /* SCROLLBAR HIDE */

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import footerPattern from "@/assets/images/footer-pattern.svg";
 import { navItems } from "@/constants/navItems";
-import { useHandleNavigation } from "@/utils/useHandleNavigation";
+import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import instagramIcon from "@/assets/icons/instagram.svg";
 import OpeningTimes from "@/components/ui/OpeningTimes";
 

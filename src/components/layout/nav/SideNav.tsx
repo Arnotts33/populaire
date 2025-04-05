@@ -6,7 +6,7 @@ import { menuSlide, slide } from "./animation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import mascotte from "@/assets/images/mascotte-animate.gif";
-import { useHandleNavigation } from "@/utils/useHandleNavigation";
+import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import Image from "next/image";
 import { navItems } from "@/constants/navItems";
 

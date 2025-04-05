@@ -30,11 +30,9 @@ export default function RootLayout({
 			<body
 				className={`${poppins.variable} ${bebasNeue.variable} ${nectoMono.variable} ${abrilFatface.variable}`}
 			>
-				<SmoothScrollProvider>
-					<Header />
-					<main>{children}</main>
-					<Footer />
-				</SmoothScrollProvider>
+				<Header />
+				<main>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);

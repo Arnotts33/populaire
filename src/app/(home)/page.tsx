@@ -1,6 +1,6 @@
-// "use client";
-// import { useEffect } from "react";
-import Lenis from "lenis";
+"use client";
+import { useEffect } from "react";
+import { useLenisScrollTo } from "@/hooks/useLenisScrollTo";
 import styles from "./page.module.css";
 import Hero from "./_sections/Hero";
 import About from "./_sections/About";
@@ -8,27 +8,40 @@ import Dwitches from "./_sections/Dwitches";
 import Gallery from "./_sections/Gallery";
 import BarAManger from "./_sections/BarAManger";
 import StMich from "./_sections/StMich";
+import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import { useLenis } from "lenis/react";
 
 export default function Home() {
-	// useEffect(() => {
-	// 	const lenis = new Lenis();
+	const scrollTo = useLenisScrollTo();
+	const lenis = useLenis();
 
-	// 	function raf(time: number) {
-	// 		lenis.raf(time);
-	// 		requestAnimationFrame(raf);
-	// 	}
+	// Handle scrolling to sections from other pages
+	useEffect(() => {
+		const scrollTarget = sessionStorage.getItem("scrollTarget");
 
-	// 	requestAnimationFrame(raf);
-	// }, []);
+		if (scrollTarget) {
+			// Ensure Lenis is ready and the page is fully loaded
+			const timer = setTimeout(() => {
+				if (lenis) {
+					lenis.start();
+					scrollTo(`#${scrollTarget}`);
+				}
+				sessionStorage.removeItem("scrollTarget");
+			}, 500);
 
+			return () => clearTimeout(timer);
+		}
+	}, [scrollTo, lenis]);
 	return (
 		<>
-			<Hero />
-			<About />
-			<Dwitches />
-			<Gallery />
-			<BarAManger />
-			<StMich />
+			<SmoothScrollProvider>
+				<Hero />
+				<About />
+				<Dwitches />
+				<Gallery />
+				<BarAManger />
+				<StMich />
+			</SmoothScrollProvider>
 		</>
 	);
 }
