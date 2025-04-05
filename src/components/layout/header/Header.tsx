@@ -1,119 +1,32 @@
 "use client";
-import Image from "next/image";
-import logoImg from "@/assets/images/logo-header.svg";
 import styles from "./Header.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { cubicBezier, motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
+import { cubicBezier, motion, AnimatePresence } from "framer-motion";
 import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import { navItems } from "@/constants/navItems";
 import SideNav from "../nav/SideNav";
-import Link from "next/link";
-import { useLenis } from "lenis/react";
+import logoImg from "@/assets/images/logo-header.svg";
+import { useHeaderAnimation } from "@/hooks/useHeaderAnimation";
+import { useBodyScrollLock } from "@/hooks/useBodyScrollLock";
 
 const Header = () => {
-	const button = useRef<HTMLDivElement>(null);
+	const buttonRef = useRef<HTMLDivElement>(null);
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
-	const lenis = useLenis();
 	const handleNavigation = useHandleNavigation(pathname);
-
-	// Store scroll position reference to avoid losing it
-	const scrollPosRef = useRef(0);
-
-	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
-	useEffect(() => {
-		if (isActive) {
-			// Store current scroll position
-			scrollPosRef.current = window.scrollY;
-
-			// Lock the scroll
-			if (lenis) lenis.stop();
-
-			document.body.classList.add("no-scroll");
-			document.body.style.top = `-${scrollPosRef.current}px`;
-		} else {
-			// Re-enable scrolling
-			document.body.classList.remove("no-scroll");
-			document.body.style.top = "";
-
-			if (lenis) {
-				lenis.start();
-				// Restore scroll position after a brief delay
-				// setTimeout(() => {
-				// 	window.scrollTo(0, scrollPosRef.current);
-				// }, 25);
-			}
-		}
-
-		return () => {
-			// Cleanup
-			document.body.classList.remove("no-scroll");
-			document.body.style.top = "";
-			if (lenis) lenis.start();
-		};
-	}, [isActive, lenis]);
 
 	useEffect(() => {
 		if (isActive) setIsActive(false);
 	}, [pathname]);
 
+	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
+	useBodyScrollLock(isActive);
+
 	// GSAP ANIMATION FOR MENU BUTTON ON SCROLL
-	useGSAP(() => {
-		gsap.registerPlugin(ScrollTrigger);
-
-		gsap.to(button.current, {
-			scrollTrigger: {
-				trigger: document.documentElement,
-				start: 0,
-				end: 400,
-
-				onLeave: () => {
-					gsap.to(button.current, {
-						scale: 1,
-						duration: 0.25,
-						ease: "power1.out",
-					});
-				},
-
-				onEnterBack: () => {
-					gsap.to(button.current, {
-						scale: 0,
-						duration: 0.25,
-						ease: "power1.out",
-					});
-				},
-			},
-		});
-
-		// HIDE MENU BUTTON AT FOOTER
-		gsap.to(button.current, {
-			scrollTrigger: {
-				trigger: "#footer",
-				start: "top 25%",
-
-				onEnter: () => {
-					gsap.to(button.current, {
-						scale: 0,
-						duration: 0.25,
-						ease: "power1.out",
-					});
-				},
-
-				onLeaveBack: () => {
-					gsap.to(button.current, {
-						scale: 1,
-						duration: 0.25,
-						ease: "power1.out",
-					});
-				},
-			},
-		});
-	}, []);
+	useHeaderAnimation(buttonRef);
 
 	function handleToggleMenu() {
 		setIsActive(!isActive);
@@ -197,7 +110,7 @@ const Header = () => {
 			</header>
 
 			{/* Burger Menu on Scroll */}
-			<div ref={button} className={styles.headerButtonContainer}>
+			<div ref={buttonRef} className={styles.headerButtonContainer}>
 				<div onClick={handleToggleMenu} className={styles.headerButton}>
 					<div
 						className={`${styles.burger} ${

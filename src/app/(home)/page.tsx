@@ -1,15 +1,15 @@
 "use client";
-import { useEffect } from "react";
-import { useLenisScrollTo } from "@/hooks/useLenisScrollTo";
+
 import styles from "./page.module.css";
+import { useEffect } from "react";
+import { useLenis } from "lenis/react";
+import { useLenisScrollTo } from "@/hooks/useLenisScrollTo";
 import Hero from "./_sections/Hero";
 import About from "./_sections/About";
 import Dwitches from "./_sections/Dwitches";
 import Gallery from "./_sections/Gallery";
 import BarAManger from "./_sections/BarAManger";
 import StMich from "./_sections/StMich";
-import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
-import { useLenis } from "lenis/react";
 
 export default function Home() {
 	const scrollTo = useLenisScrollTo();
@@ -27,7 +27,7 @@ export default function Home() {
 					scrollTo(`#${scrollTarget}`);
 				}
 				sessionStorage.removeItem("scrollTarget");
-			}, 500);
+			}, 400);
 
 			return () => clearTimeout(timer);
 		}
@@ -35,14 +35,12 @@ export default function Home() {
 
 	return (
 		<>
-			<SmoothScrollProvider>
-				<Hero />
-				<About />
-				<Dwitches />
-				<Gallery />
-				<BarAManger />
-				<StMich />
-			</SmoothScrollProvider>
+			<Hero />
+			<About />
+			<Dwitches />
+			<Gallery />
+			<BarAManger />
+			<StMich />
 		</>
 	);
 }

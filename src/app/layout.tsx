@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
+import "../styles/globals.css";
 import {
 	poppins,
 	bebasNeue,
 	nectoMono,
 	abrilFatface,
 } from "@/assets/fonts/fonts";
-import "../styles/globals.css";
 import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import Footer from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
 	title: "Populaire Dwitcherie",
@@ -30,9 +30,11 @@ export default function RootLayout({
 			<body
 				className={`${poppins.variable} ${bebasNeue.variable} ${nectoMono.variable} ${abrilFatface.variable}`}
 			>
-				<Header />
-				<main>{children}</main>
-				<Footer />
+				<SmoothScrollProvider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</SmoothScrollProvider>
 			</body>
 		</html>
 	);

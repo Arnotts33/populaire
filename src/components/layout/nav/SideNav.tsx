@@ -1,14 +1,14 @@
 "use client";
 
 import styles from "./SideNav.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import mascotte from "@/assets/images/mascotte-animate.gif";
 import { useHandleNavigation } from "@/hooks/useHandleNavigation";
-import Image from "next/image";
 import { navItems } from "@/constants/navItems";
+import mascotte from "@/assets/images/mascotte-animate.gif";
 
 const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 	const pathname = usePathname();
