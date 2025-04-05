@@ -50,12 +50,12 @@
 			order: 1;
 
 			@media (width <= 768px) {
-				margin-left: 2rem;
+				margin-right: 2rem;
 			}
 
 			@media (width <= 640px) {
 				order: 2;
-				margin-left: 4rem;
+				margin-right: 4rem;
 			}
 
 			img {

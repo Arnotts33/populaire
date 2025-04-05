@@ -32,6 +32,7 @@ export default function Home() {
 			return () => clearTimeout(timer);
 		}
 	}, [scrollTo, lenis]);
+
 	return (
 		<>
 			<SmoothScrollProvider>

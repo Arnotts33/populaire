@@ -1,7 +1,6 @@
 "use client";
 import { useRef } from "react";
 import styles from "./StMich.module.css";
-import dorianCams from "@/assets/images/dorian-cams.webp";
 import jujuCams from "@/assets/images/juju-cams.webp";
 import joPlonge from "@/assets/images/jo-plonge.webp";
 import dorianPorchetta from "@/assets/images/dorian-porchetta.webp";

@@ -63,6 +63,7 @@
 
 	.mascotte {
 		width: clamp(13.4375rem, 11.9581rem + 6.962vw, 20.3125rem);
+		height: auto;
 
 		@media (width <= 1540px) {
 			align-self: center;

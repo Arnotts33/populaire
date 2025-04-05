@@ -19,6 +19,7 @@
 
 .logo {
 	width: clamp(9.375rem, 9.1357rem + 1.1261vw, 10.9375rem);
+	height: auto;
 }
 
 .nav {

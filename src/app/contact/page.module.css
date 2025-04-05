@@ -1,3 +1,50 @@
-.contact {
-	height: 200vh;
+.contactMain {
+	max-width: 1920px;
+	margin: 10rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contactTitle {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-inline: 2rem;
+	margin-bottom: 2rem;
+
+	@media (width <= 640px) {
+		padding-inline: 1rem;
+		margin-bottom: 0;
+	}
+
+	h1 {
+		font-family: var(--font-bebas-neue);
+		color: black;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: clamp(4rem, 16vw, 12rem);
+	}
+
+	p {
+		font-family: var(--font-poppins);
+		color: black;
+		font-size: clamp(1rem, 0.8924rem + 0.5063vw, 1.5rem);
+		width: 100%;
+		max-width: 800px;
+		text-wrap: balance;
+	}
+}
+
+.contactFormContainer {
+	margin-top: 5rem;
+	padding-inline: 2rem;
+	width: 80%;
+	max-width: 1200px;
+
+	@media (width <= 475px) {
+		padding-inline: 1rem;
+		width: 100%;
+	}
 }
