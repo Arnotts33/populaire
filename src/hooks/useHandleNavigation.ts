@@ -71,8 +71,8 @@ export function useHandleNavigation(pathname: string, toggleMenu?: () => void) {
 				} else {
 					// We're on a different page
 					// Store the target section to scroll to after navigation
-					sessionStorage.setItem("scrollTarget", sectionId);
-					router.push("/");
+					// sessionStorage.setItem("scrollTarget", sectionId);
+					router.push(item.href);
 				}
 			}
 		};
