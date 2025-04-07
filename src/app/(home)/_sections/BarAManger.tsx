@@ -1,11 +1,27 @@
+"use client";
+
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
 import styles from "./BarAManger.module.css";
 import Image from "next/image";
 import table from "@/assets/images/table.webp";
 import doomsday from "@/assets/images/doomsday.webp";
+import SlidingKeywords from "@/components/ui/keywords/SlidingKeywords";
 
 const BarAManger = () => {
+	const section = useRef<HTMLDivElement>(null);
+
+	const { scrollYProgress } = useScroll({
+		target: section,
+		offset: ["start end", "end start"],
+	});
+
 	return (
-		<section className={styles.barAMangerSection} id="bar-a-manger">
+		<section
+			ref={section}
+			className={styles.barAMangerSection}
+			id="bar-a-manger"
+		>
 			<div className={styles.barAMangerContent}>
 				<div className={styles.topContent}>
 					<div className={styles.imageContainer}>
@@ -16,12 +32,26 @@ const BarAManger = () => {
 						/>
 					</div>
 					<div className={styles.titleContainer}>
-						<div className={styles.album}>
-							<Image
-								src={doomsday}
-								alt="Doomsday album cover"
-								className={styles.albumCoverimage}
-							/>
+						<div className={styles.albumBanner}>
+							<div className={styles.imageWrapper}>
+								<Image
+									src={doomsday}
+									alt="Doomsday album cover"
+									className={styles.albumCoverimage}
+								/>
+							</div>
+							<div className={styles.keywordsContainer}>
+								<SlidingKeywords
+									left={"-5%"}
+									progress={scrollYProgress}
+									direction={"left"}
+								/>
+								<SlidingKeywords
+									left={"-5%"}
+									progress={scrollYProgress}
+									direction={"right"}
+								/>
+							</div>
 						</div>
 						<div className={styles.title}>
 							<h1 className={styles.titleText}>Bar à Manger</h1>

@@ -1,22 +1,45 @@
+"use client";
+
 import styles from "./Dwitches.module.css";
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
+
 import sandwich from "@/assets/images/grilled-cheese.webp";
 import daftpunk from "@/assets/images/daftpunk.webp";
 import Image from "next/image";
-import ScrollingKeywords from "@/components/ui/ScrollingKeywords";
+import SlidingKeywords from "@/components/ui/keywords/SlidingKeywords";
 
 const Dwitches = () => {
+	const section = useRef<HTMLDivElement>(null);
+
+	const { scrollYProgress } = useScroll({
+		target: section,
+		offset: ["start end", "end start"],
+	});
+
 	return (
-		<section className={styles.dwitchesSection} id="dwitches">
+		<section ref={section} className={styles.dwitchesSection} id="dwitches">
 			<div className={styles.dwitchContent}>
 				<div className={styles.topContent}>
 					<div className={styles.titleContainer}>
-						<div className={styles.album}>
+						<div className={styles.albumBanner}>
 							<Image
 								src={daftpunk}
 								alt="Daft Punk album cover"
 								className={styles.albumCoverimage}
-								// width={128}
 							/>
+							<div className={styles.keywordsContainer}>
+								<SlidingKeywords
+									left={"-15%"}
+									progress={scrollYProgress}
+									direction={"left"}
+								/>
+								<SlidingKeywords
+									left={"-5%"}
+									progress={scrollYProgress}
+									direction={"right"}
+								/>
+							</div>
 						</div>
 						<div className={styles.title}>
 							<h1 className={styles.titleText}>Dwitches</h1>

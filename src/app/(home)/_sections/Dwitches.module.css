@@ -27,10 +27,10 @@
 .topContent {
 	width: 100%;
 	display: flex;
-	gap: clamp(2rem, 0.5rem + 3.75vw, 5rem);
 
 	@media (width <= 640px) {
 		flex-direction: column;
+		gap: 2rem;
 	}
 
 	.titleContainer {
@@ -43,10 +43,14 @@
 			gap: 2rem;
 		}
 
-		.album {
-			width: fit-content;
-			display: flex;
+		.albumBanner {
 			order: 1;
+			display: flex;
+			position: relative;
+
+			@media (width > 1536px) {
+				overflow: hidden;
+			}
 
 			@media (width <= 768px) {
 				margin-left: 2rem;
@@ -57,12 +61,26 @@
 				margin-left: 4rem;
 			}
 
+			@media (width <= 475px) {
+				margin-left: 2.5rem;
+			}
+
 			img {
 				width: 100%;
 				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
 				height: auto;
 				object-fit: cover;
 				align-self: flex-end;
+			}
+
+			.keywordsContainer {
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				flex-direction: column;
+				gap: clamp(0.25rem, 0.0886rem + 0.7595vw, 1rem);
+				z-index: -1;
 			}
 		}
 
@@ -79,6 +97,7 @@
 				font-size: clamp(5rem, -1rem + 12.5vw, 14rem);
 				font-weight: 400;
 				display: flow-root;
+				padding-right: 2rem;
 
 				&::before {
 					content: "";

@@ -27,10 +27,11 @@
 .topContent {
 	width: 100%;
 	display: flex;
-	gap: clamp(2rem, 0.5rem + 3.75vw, 5rem);
+	/* gap: clamp(2rem, 0.5rem + 3.75vw, 5rem); */
 
 	@media (width <= 640px) {
 		flex-direction: column;
+		gap: 2rem;
 	}
 
 	.titleContainer {
@@ -43,11 +44,21 @@
 			gap: 2rem;
 		}
 
-		.album {
-			width: fit-content;
-			align-self: flex-end;
-			display: flex;
+		.albumBanner {
+			/* width: fit-content; */
+			/* align-self: flex-end; */
 			order: 1;
+			display: flex;
+			position: relative;
+			justify-content: flex-end;
+
+			.imageWrapper {
+				z-index: 1;
+			}
+
+			@media (width > 1536px) {
+				overflow: hidden;
+			}
 
 			@media (width <= 768px) {
 				margin-right: 2rem;
@@ -64,7 +75,17 @@
 				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
 				height: auto;
 				object-fit: cover;
-				align-self: flex-end;
+			}
+
+			.keywordsContainer {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				flex-direction: column;
+				gap: clamp(0.25rem, 0.0886rem + 0.7595vw, 1rem);
+				z-index: -1;
 			}
 		}
 
@@ -81,6 +102,7 @@
 				font-size: clamp(3.5rem, 0.445rem + 7.6375vw, 9.61rem);
 				font-weight: 400;
 				display: flow-root;
+				padding-left: 2rem;
 
 				&::before {
 					content: "";
@@ -96,6 +118,7 @@
 
 				@media (width <= 640px) {
 					font-size: clamp(4.25rem, -0.5667rem + 22.6667vw, 8.5rem);
+					padding: 0;
 					text-align: center;
 				}
 			}
@@ -123,7 +146,7 @@
 
 .bottomContent {
 	p {
-		width: 80%;
+		width: 85%;
 		font-size: clamp(1.25rem, 1rem + 0.625vw, 1.75rem);
 		text-wrap: balance;
 		line-height: 2;

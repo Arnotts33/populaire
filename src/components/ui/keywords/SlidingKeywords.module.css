@@ -1,0 +1,6 @@
+.lineContainer {
+	display: flex;
+	position: relative;
+	white-space: nowrap;
+	gap: 0.25rem;
+}
