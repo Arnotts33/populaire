@@ -6,8 +6,8 @@ const Contact = () => {
 		<>
 			<main className={styles.contactMain}>
 				<div className={styles.contactTitle}>
-					<h1>Contact</h1>
-					<p>
+					<h1 className={styles.title}>Contact</h1>
+					<p className={styles.description}>
 						Une question, une collab, ou juste envie d’échanger ? Écris-nous, on
 						sera ravis de te répondre. Que ce soit pour en savoir plus,
 						travailler ensemble ou juste parler cuisine, on est là.

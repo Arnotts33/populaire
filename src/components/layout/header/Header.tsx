@@ -51,6 +51,7 @@ const Header = () => {
 										<Link
 											href={item.href}
 											onClick={(event) => handleNavigation(event, item)}
+											className={styles.link}
 										>
 											{item.title}
 										</Link>

@@ -42,7 +42,7 @@
 	z-index: 1;
 	transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 
-	a {
+	.link {
 		font-size: clamp(1rem, 0.9181rem + 0.1724vw, 1.125rem);
 	}
 }

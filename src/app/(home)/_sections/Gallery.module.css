@@ -27,7 +27,7 @@
 			gap: 2rem;
 		}
 
-		img {
+		.counterDwitchImage .grilledSunImage chairsImage {
 			width: clamp(14.375rem, -1.042rem + 32.118vi, 37.5rem);
 			height: auto;
 

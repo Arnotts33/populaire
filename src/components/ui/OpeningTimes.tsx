@@ -3,10 +3,10 @@ import styles from "./OpeningTimes.module.css";
 const OpeningTimes = () => {
 	return (
 		<div className={styles.openingTimes}>
-			<h3>Horaires d'ouverture :</h3>
-			<p>Mercredi - Samedi : 12h - 19h30</p>
-			<p>Jeudi - Vendredi : 12h - 00h</p>
-			<p>Dimanche : 11h - 16h</p>
+			<h3 className={styles.title}>Horaires d'ouverture :</h3>
+			<p className={styles.text}>Mercredi - Samedi : 12h - 19h30</p>
+			<p className={styles.text}>Jeudi - Vendredi : 12h - 00h</p>
+			<p className={styles.text}>Dimanche : 11h - 16h</p>
 		</div>
 	);
 };

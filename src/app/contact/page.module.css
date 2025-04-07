@@ -19,7 +19,7 @@
 		margin-bottom: 0;
 	}
 
-	h1 {
+	.title {
 		font-family: var(--font-bebas-neue);
 		color: black;
 		font-weight: 400;
@@ -27,7 +27,7 @@
 		font-size: clamp(4rem, 16vw, 12rem);
 	}
 
-	p {
+	.description {
 		font-family: var(--font-poppins);
 		color: black;
 		font-size: clamp(1rem, 0.8924rem + 0.5063vw, 1.5rem);
