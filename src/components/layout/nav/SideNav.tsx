@@ -54,10 +54,15 @@ const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 					<a
 						href="https://www.instagram.com/populairedwitcherie/?hl=fr"
 						target="_blank"
+						className={styles.footerLink}
 					>
 						Instagram
 					</a>
-					<a href="https://lefooding.com/restaurants/populaire" target="_blank">
+					<a
+						href="https://lefooding.com/restaurants/populaire"
+						target="_blank"
+						className={styles.footerLink}
+					>
 						Le Fooding
 					</a>
 				</div>

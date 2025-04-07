@@ -8,7 +8,7 @@ const About = () => {
 		<section className={styles.aboutSection} id="about">
 			<div className={styles.aboutContent}>
 				<div className={styles.contentLeftSide}>
-					<p>
+					<p className={styles.text}>
 						Ici, on fait des sandwichs costauds: du goût, des produits frais, et
 						des inspirations venues d’un périple aux 4 coins du globe. Chaque
 						bouchée, c’est un petit voyage. Simple, gourmand, et franchement

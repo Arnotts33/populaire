@@ -27,7 +27,7 @@ const Dwitches = () => {
 							<Image
 								src={daftpunk}
 								alt="Daft Punk album cover"
-								className={styles.albumCoverimage}
+								className={styles.albumCoverImage}
 							/>
 							<div className={styles.keywordsContainer}>
 								<SlidingKeywords

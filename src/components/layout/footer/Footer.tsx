@@ -23,7 +23,7 @@ const Footer = () => {
 			/>
 			<div className={styles.footerContent}>
 				<nav className={styles.footerNav}>
-					<ul>
+					<ul className={styles.footerNavList}>
 						{navItems
 							.filter(
 								(item) => item.title !== "Contact" && item.title !== "Venir"
@@ -66,9 +66,9 @@ const Footer = () => {
 				</div>
 				<div className={styles.footerInfo}>
 					<div className={styles.footerInfoItem}>
-						<h3>Adresse :</h3>
-						<p>48 rue des Faures</p>
-						<p>33000 Bordeaux</p>
+						<h3 className={styles.itemTitle}>Adresse :</h3>
+						<p className={styles.itemText}>48 rue des Faures</p>
+						<p className={styles.itemText}>33000 Bordeaux</p>
 					</div>
 					<div className={styles.footerInfoItem}>
 						<OpeningTimes />
@@ -85,14 +85,15 @@ const Footer = () => {
 								alt="Instagram logo"
 								width={40}
 								height={40}
+								className={styles.instaLogoImage}
 							/>
 						</a>
 					</div>
 				</div>
 
 				<div className={styles.footerCredits}>
-					<span>© Populaire 2025</span>
-					<span>Site Credits</span>
+					<span className={styles.creditsText}>© Populaire 2025</span>
+					<span className={styles.creditsText}>Site Credits</span>
 				</div>
 			</div>
 		</footer>

@@ -51,8 +51,8 @@
 	gap: 1rem;
 	position: relative;
 
-	h1,
-	h2 {
+	.mainTitle,
+	.subTitle {
 		display: flow-root;
 
 		&::before {
@@ -68,7 +68,7 @@
 		}
 	}
 
-	h1 {
+	.mainTitle {
 		font-family: var(--font-bebas-neue);
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
 		z-index: 1;
@@ -79,7 +79,7 @@
 		}
 	}
 
-	h2 {
+	.subTitle {
 		font-family: var(--font-poppins);
 		font-size: clamp(0.65rem, 0.425rem + 0.95vw, 1.25rem);
 		font-weight: 400;
@@ -95,7 +95,7 @@
 	z-index: 0;
 	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
 
-	img {
+	.sticker {
 		width: 100%;
 		height: auto;
 		object-fit: cover;

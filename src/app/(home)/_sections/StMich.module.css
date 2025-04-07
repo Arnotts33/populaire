@@ -22,10 +22,10 @@
 	}
 }
 
-.title {
+.titleContainer {
 	width: 100%;
 
-	h1 {
+	.title {
 		text-align: center;
 		font-size: clamp(15rem, 11.5rem + 8.75vw, 22rem);
 		text-transform: uppercase;
@@ -100,7 +100,7 @@
 			z-index: 2;
 		}
 
-		img {
+		.image {
 			object-fit: cover;
 			width: 100%;
 			height: auto;
@@ -122,7 +122,7 @@
 		bottom: 0;
 	}
 
-	img {
+	.stickerPink {
 		width: 100%;
 		height: auto;
 		object-fit: cover;
@@ -138,7 +138,7 @@
 	transform: rotate(-24deg);
 	width: clamp(7.5rem, 6.155rem + 6.329vw, 13.75rem);
 
-	img {
+	.stickerShine {
 		width: 100%;
 		height: auto;
 		object-fit: cover;

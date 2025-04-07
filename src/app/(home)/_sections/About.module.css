@@ -30,7 +30,7 @@
 .contentLeftSide {
 	flex: 2;
 
-	p {
+	.text {
 		font-size: clamp(1.25rem, 0.9437rem + 1.4414vw, 3.25rem);
 	}
 }

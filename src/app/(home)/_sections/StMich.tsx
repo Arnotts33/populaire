@@ -57,8 +57,8 @@ const StMich = () => {
 	return (
 		<section ref={section} className={styles.stMichSection} id="st-mich">
 			<div className={styles.stMichContent}>
-				<div className={styles.title}>
-					<h1>St Mich</h1>
+				<div className={styles.titleContainer}>
+					<h1 className={styles.title}>St Mich</h1>
 				</div>
 				<div className={styles.images}>
 					{images.map(({ src, y, rotate }, i) => {
@@ -69,7 +69,7 @@ const StMich = () => {
 								key={`i_${i}`}
 								className={styles.imageContainer}
 							>
-								<Image src={src} alt="image" />
+								<Image src={src} alt="image" className={styles.image} />
 							</motion.div>
 						);
 					})}

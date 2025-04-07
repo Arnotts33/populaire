@@ -67,7 +67,7 @@
 				margin-right: 4rem;
 			}
 
-			img {
+			.albumCoverImage {
 				width: 100%;
 				aspect-ratio: 1/1;
 				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
@@ -97,7 +97,7 @@
 				width: 100%;
 			}
 
-			h1 {
+			.titleText {
 				font-size: clamp(3.5rem, 0.445rem + 7.6375vw, 9.61rem);
 				font-weight: 400;
 				display: flow-root;
@@ -132,7 +132,7 @@
 			order: 3;
 		}
 
-		img {
+		.barAMangerImage {
 			width: 100%;
 			aspect-ratio: 1/1;
 			height: auto;

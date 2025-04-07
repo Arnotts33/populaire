@@ -38,7 +38,7 @@ const BarAManger = () => {
 								<Image
 									src={doomsday}
 									alt="Doomsday album cover"
-									className={styles.albumCoverimage}
+									className={styles.albumCoverImage}
 								/>
 							</div>
 							<div className={styles.keywordsContainer}>

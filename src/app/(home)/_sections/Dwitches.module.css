@@ -65,7 +65,7 @@
 				margin-left: 2.5rem;
 			}
 
-			img {
+			.albumCoverImage {
 				width: 100%;
 				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
 				height: auto;
@@ -94,7 +94,7 @@
 				width: 100%;
 			}
 
-			h1 {
+			.titleText {
 				font-size: clamp(5rem, -1rem + 12.5vw, 14rem);
 				font-weight: 400;
 				display: flow-root;
@@ -124,7 +124,7 @@
 		flex: 1;
 		display: flex;
 
-		img {
+		.dwitchImage {
 			width: 100%;
 			height: auto;
 			object-fit: cover;
@@ -134,7 +134,7 @@
 }
 
 .bottomContent {
-	p {
+	.descriptionText {
 		width: 80%;
 		font-size: clamp(1.25rem, 1rem + 0.625vw, 1.75rem);
 		text-wrap: balance;

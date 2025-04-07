@@ -41,8 +41,8 @@ const Hero = () => {
 							className={styles.sticker}
 						/>
 					</div>
-					<h1>Dwitcherie</h1>
-					<h2>bar à manger, cave à vins</h2>
+					<h1 className={styles.mainTitle}>Dwitcherie</h1>
+					<h2 className={styles.subTitle}>bar à manger, cave à vins</h2>
 				</div>
 			</div>
 		</section>
