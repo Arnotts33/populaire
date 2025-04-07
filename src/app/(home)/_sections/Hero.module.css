@@ -1,13 +1,14 @@
 .hero {
-	width: 100vw; /* On veut que la section prenne toute la largeur de l'écran */
+	width: 100vw;
 	height: 100svh;
 	overflow: hidden;
 	padding-block: 10rem 5rem;
-	position: relative; /* pour que le sticker reste positionné dans cette zone */
+	position: relative;
 }
 
 .heroContent {
 	max-width: 1536px;
+	height: 100%;
 	margin: 0 auto;
 	padding-inline: 2rem;
 	display: flex;
@@ -15,7 +16,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	height: 100%;
 }
 
 @media (width <= 768px) {

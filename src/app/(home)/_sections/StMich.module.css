@@ -22,10 +22,21 @@
 	}
 }
 
-.title h1 {
-	text-align: center;
-	font-size: clamp(7.92rem, 5.3205rem + 12.2329vw, 20rem);
-	text-transform: uppercase;
+.title {
+	width: 100%;
+
+	h1 {
+		text-align: center;
+		font-size: clamp(15rem, 11.5rem + 8.75vw, 22rem);
+		text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: clamp(0rem, -0.0156rem + 0.0391vw, 0.03125rem);
+
+		@media (width <= 640px) {
+			font-size: clamp(7.92rem, -0.104rem + 37.76vw, 15rem);
+			letter-spacing: 0;
+		}
+	}
 }
 
 .images {
@@ -93,13 +104,14 @@
 			object-fit: cover;
 			width: 100%;
 			height: auto;
+			display: block;
 		}
 	}
 }
 
 .stickerWrapper1 {
 	position: absolute;
-	z-index: 120;
+	z-index: 6;
 	bottom: 15%;
 	left: 20%;
 	transform: rotate(24deg);
@@ -109,12 +121,13 @@
 		width: 100%;
 		height: auto;
 		object-fit: cover;
+		display: block;
 	}
 }
 
 .stickerWrapper2 {
 	position: absolute;
-	z-index: 120;
+	z-index: 6;
 	top: 60%;
 	right: 20%;
 	transform: rotate(-24deg);
@@ -124,5 +137,6 @@
 		width: 100%;
 		height: auto;
 		object-fit: cover;
+		display: block;
 	}
 }
