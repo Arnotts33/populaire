@@ -11,7 +11,7 @@ const SlidingKeywords = ({
 	keywords,
 }: {
 	left: string;
-	progress: any;
+	progress: import("framer-motion").MotionValue<number>;
 	direction: string;
 	keywords: string;
 }) => {
