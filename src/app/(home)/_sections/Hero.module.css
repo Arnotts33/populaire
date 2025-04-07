@@ -89,7 +89,7 @@
 
 .stickerWrapper {
 	position: absolute;
-	bottom: 80%;
+	bottom: 85%;
 	right: -5px;
 	transform: rotate(24deg);
 	z-index: 0;

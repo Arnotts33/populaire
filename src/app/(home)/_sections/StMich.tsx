@@ -73,24 +73,22 @@ const StMich = () => {
 							</motion.div>
 						);
 					})}
-				</div>
-				<div className={styles.stickerWrapper1}>
-					<Image
-						ref={stickerPink}
-						src={pinkSticker}
-						alt="Sticker"
-						className={styles.stickerPink}
-						width={150}
-					/>
-				</div>
-				<div className={styles.stickerWrapper2}>
-					<Image
-						ref={stickerShine}
-						src={shineSticker}
-						alt="Sticker"
-						className={styles.stickerShine}
-						width={180}
-					/>
+					<div className={styles.stickerWrapperPink}>
+						<Image
+							ref={stickerPink}
+							src={pinkSticker}
+							alt="Sticker"
+							className={styles.stickerPink}
+						/>
+					</div>
+					<div className={styles.stickerWrapperShine}>
+						<Image
+							ref={stickerShine}
+							src={shineSticker}
+							alt="Sticker"
+							className={styles.stickerShine}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

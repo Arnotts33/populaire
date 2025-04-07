@@ -120,8 +120,8 @@
 		position: relative;
 	}
 
-	.instaLogo {
-		line-height: 1;
+	img {
+		display: block;
 	}
 
 	@media (width > 720px) {

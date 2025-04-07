@@ -80,7 +80,12 @@ const Footer = () => {
 							rel="noopener noreferrer"
 							className={styles.instaLogo}
 						>
-							<Image src={instagramIcon} alt="Instagram logo" width={40} />
+							<Image
+								src={instagramIcon}
+								alt="Instagram logo"
+								width={40}
+								height={40}
+							/>
 						</a>
 					</div>
 				</div>

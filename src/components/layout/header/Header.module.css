@@ -20,6 +20,7 @@
 .logo {
 	width: clamp(9.375rem, 9.1357rem + 1.1261vw, 10.9375rem);
 	height: auto;
+	display: block;
 }
 
 .nav {
@@ -174,11 +175,13 @@
 	border: none;
 	position: relative;
 	z-index: 1000;
+	display: block;
 }
 
 .hamburger {
 	fill: black;
 	transition: 1s;
+	display: block;
 }
 
 .hamburger.mobileBurgerActive {

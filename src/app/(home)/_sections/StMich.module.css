@@ -44,10 +44,10 @@
 	position: relative;
 	margin-inline: auto;
 	padding-inline: 2rem;
-	height: 100vh;
+	height: 100dvh;
 
 	@media screen and (max-height: 1400px) and (width <= 1024px) {
-		height: 70vh;
+		height: 70dvh;
 	}
 
 	.imageContainer {
@@ -57,7 +57,7 @@
 		&:nth-of-type(1) {
 			left: 0;
 			right: 0;
-			top: 8rem;
+			top: 5rem;
 			margin-inline: auto;
 			width: clamp(15.625rem, 8.228rem + 34.81vi, 50rem);
 			z-index: 1;
@@ -65,7 +65,7 @@
 
 		&:nth-of-type(2) {
 			left: clamp(0rem, -3.063rem + 14.414vi, 20rem);
-			top: 20rem;
+			top: 18rem;
 			width: clamp(6.25rem, 3.224rem + 14.241vi, 20.313rem);
 			z-index: 2;
 		}
@@ -73,7 +73,7 @@
 		&:nth-of-type(3) {
 			left: 0;
 			right: 0;
-			top: clamp(23rem, 19.937rem + 14.414vi, 43rem);
+			top: clamp(24rem, 13.837rem + 14.314vi, 42rem);
 			margin-inline: auto;
 			width: clamp(6.25rem, 3.224rem + 14.241vi, 20.313rem);
 			z-index: 3;
@@ -81,21 +81,21 @@
 
 		&:nth-of-type(4) {
 			left: clamp(0rem, -3.063rem + 14.414vi, 20rem);
-			top: clamp(32rem, 28.937rem + 14.414vi, 52rem);
+			top: clamp(30rem, 22.937rem + 13.414vi, 51rem);
 			width: clamp(8rem, 3.696rem + 20.253vi, 28rem);
 			z-index: 4;
 		}
 
 		&:nth-of-type(5) {
 			right: clamp(0rem, -3.063rem + 14.414vi, 20rem);
-			top: 20rem;
+			top: 19rem;
 			width: clamp(6.25rem, 3.224rem + 14.241vi, 20.313rem);
 			z-index: 2;
 		}
 
 		&:nth-of-type(6) {
 			right: clamp(0rem, -3.063rem + 14.414vi, 20rem);
-			top: clamp(27rem, 23.171rem + 18.018vi, 52rem);
+			top: clamp(25rem, 21.171rem + 13.018vi, 52rem);
 			width: clamp(8rem, 3.696rem + 20.253vi, 28rem);
 			z-index: 2;
 		}
@@ -109,13 +109,18 @@
 	}
 }
 
-.stickerWrapper1 {
+.stickerWrapperPink {
 	position: absolute;
 	z-index: 6;
-	bottom: 15%;
-	left: 20%;
+	top: 2rem;
+	right: clamp(0rem, -6.456rem + 30.38vw, 30rem);
+
 	transform: rotate(24deg);
 	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
+
+	@media (height <= 680) {
+		bottom: 0;
+	}
 
 	img {
 		width: 100%;
@@ -125,11 +130,11 @@
 	}
 }
 
-.stickerWrapper2 {
+.stickerWrapperShine {
 	position: absolute;
 	z-index: 6;
-	top: 60%;
-	right: 20%;
+	top: 2rem;
+	left: clamp(0rem, -6.456rem + 30.38vw, 30rem);
 	transform: rotate(-24deg);
 	width: clamp(7.5rem, 6.155rem + 6.329vw, 13.75rem);
 
