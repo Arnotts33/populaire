@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { cubicBezier, motion, AnimatePresence } from "framer-motion";
 import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import { navItems } from "@/constants/navItems";
@@ -17,10 +17,6 @@ const Header = () => {
 	const [isActive, setIsActive] = useState(false);
 	const pathname = usePathname();
 	const handleNavigation = useHandleNavigation(pathname);
-
-	useEffect(() => {
-		if (isActive) setIsActive(false);
-	}, [pathname]);
 
 	// DISABLE SCROLL ON BODY WHEN MENU IS OPEN
 	useBodyScrollLock(isActive);

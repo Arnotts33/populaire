@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Hero from "./_sections/Hero";
 import About from "./_sections/About";
 import Dwitches from "./_sections/Dwitches";

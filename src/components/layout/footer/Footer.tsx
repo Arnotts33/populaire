@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +12,6 @@ import OpeningTimes from "@/components/ui/OpeningTimes";
 const Footer = () => {
 	const pathname = usePathname();
 	const handleNavigation = useHandleNavigation(pathname);
-	const router = useRouter();
 
 	return (
 		<footer className={styles.footer} id="footer">

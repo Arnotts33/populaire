@@ -15,7 +15,7 @@ const SlidingKeywords = ({
 	direction: string;
 	keywords: string;
 }) => {
-	const leftDirection: any = direction === "left" ? -1 : 1;
+	const leftDirection: number = direction === "left" ? -1 : 1;
 	const translateX = useTransform(
 		progress,
 		[0, 1],

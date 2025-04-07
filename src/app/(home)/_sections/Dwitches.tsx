@@ -63,7 +63,7 @@ const Dwitches = () => {
 						chez Cérès, des produits de qualité, garniture aux petits soins,
 						tout bien cuisiné comme il faut. Simple, efficace, ultra gourmand.
 						Passe quand tu veux, ça se croque sur place ou à embarquer, selon
-						l'humeur.
+						l&apos;humeur.
 					</p>
 				</div>
 			</div>

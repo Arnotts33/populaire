@@ -5,7 +5,6 @@ import { useLenis } from "lenis/react";
 
 export function useHandleNavigation(pathname: string, toggleMenu?: () => void) {
 	const router = useRouter();
-	const scrollTo = useLenisScrollTo();
 	const lenis = useLenis();
 
 	const handleNavigation = (

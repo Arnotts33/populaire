@@ -10,9 +10,9 @@ const About = () => {
 				<div className={styles.contentLeftSide}>
 					<p className={styles.text}>
 						Ici, on fait des sandwichs costauds: du goût, des produits frais, et
-						des inspirations venues d’un périple aux 4 coins du globe. Chaque
-						bouchée, c’est un petit voyage. Simple, gourmand, et franchement
-						bon.
+						des inspirations venues d&apos;un périple aux 4 coins du globe.
+						Chaque bouchée, c&apos;est un petit voyage. Simple, gourmand, et
+						franchement bon.
 					</p>
 				</div>
 				<div className={styles.contentRightSide}>

@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { RefObject } from "react";
 
 export const useHeaderAnimation = (
-	buttonRef: React.RefObject<HTMLDivElement | null>
+	buttonRef: RefObject<HTMLDivElement | null>
 ) => {
 	useGSAP(() => {
 		gsap.registerPlugin(ScrollTrigger);
