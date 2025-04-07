@@ -8,6 +8,7 @@ import sandwich from "@/assets/images/grilled-cheese.webp";
 import daftpunk from "@/assets/images/daftpunk.webp";
 import Image from "next/image";
 import SlidingKeywords from "@/components/ui/keywords/SlidingKeywords";
+import { dwitchKeywords } from "@/constants/keywords";
 
 const Dwitches = () => {
 	const section = useRef<HTMLDivElement>(null);
@@ -30,14 +31,16 @@ const Dwitches = () => {
 							/>
 							<div className={styles.keywordsContainer}>
 								<SlidingKeywords
-									left={"-15%"}
+									left={"-%"}
 									progress={scrollYProgress}
 									direction={"left"}
+									keywords={dwitchKeywords}
 								/>
 								<SlidingKeywords
 									left={"-5%"}
 									progress={scrollYProgress}
 									direction={"right"}
+									keywords={dwitchKeywords}
 								/>
 							</div>
 						</div>

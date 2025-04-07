@@ -7,6 +7,7 @@ import Image from "next/image";
 import table from "@/assets/images/table.webp";
 import doomsday from "@/assets/images/doomsday.webp";
 import SlidingKeywords from "@/components/ui/keywords/SlidingKeywords";
+import { barAMangerKeywords } from "@/constants/keywords";
 
 const BarAManger = () => {
 	const section = useRef<HTMLDivElement>(null);
@@ -45,11 +46,13 @@ const BarAManger = () => {
 									left={"-5%"}
 									progress={scrollYProgress}
 									direction={"left"}
+									keywords={barAMangerKeywords}
 								/>
 								<SlidingKeywords
-									left={"-5%"}
+									left={"-8%"}
 									progress={scrollYProgress}
 									direction={"right"}
+									keywords={barAMangerKeywords}
 								/>
 							</div>
 						</div>

@@ -1,11 +1,9 @@
 import styles from "./Keywords.module.css";
 
-const Keywords = () => {
+const Keywords = ({ keywords }: { keywords: string }) => {
 	return (
 		<div className={styles.container}>
-			<p>
-				grilled cheese • smash • tacos • populaire • smash • tacos • baguette •{" "}
-			</p>
+			<p>{keywords}</p>
 		</div>
 	);
 };

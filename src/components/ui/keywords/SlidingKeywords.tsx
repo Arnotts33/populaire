@@ -8,10 +8,12 @@ const SlidingKeywords = ({
 	left,
 	progress,
 	direction,
+	keywords,
 }: {
 	left: string;
 	progress: any;
 	direction: string;
+	keywords: string;
 }) => {
 	const leftDirection: any = direction === "left" ? -1 : 1;
 	const translateX = useTransform(
@@ -25,9 +27,9 @@ const SlidingKeywords = ({
 			className={styles.lineContainer}
 			style={{ x: translateX, left: left }}
 		>
-			<Keywords />
-			<Keywords />
-			<Keywords />
+			<Keywords keywords={keywords} />
+			<Keywords keywords={keywords} />
+			<Keywords keywords={keywords} />
 		</motion.div>
 	);
 };
