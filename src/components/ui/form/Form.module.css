@@ -46,7 +46,7 @@
 
 .textareaContainer {
 	margin-bottom: 2rem;
-	textarea {
+	.textarea {
 		width: 100%;
 		padding-block: 0.5rem;
 		padding-left: 1rem;

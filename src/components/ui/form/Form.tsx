@@ -59,6 +59,7 @@ const Form = () => {
 			</div>
 			<div className={styles.textareaContainer}>
 				<textarea
+					className={styles.textarea}
 					placeholder="Votre message"
 					rows={8}
 					name="message"
