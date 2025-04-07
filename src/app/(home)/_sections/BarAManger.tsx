@@ -49,7 +49,7 @@ const BarAManger = () => {
 									keywords={barAMangerKeywords}
 								/>
 								<SlidingKeywords
-									left={"-8%"}
+									left={"-18%"}
 									progress={scrollYProgress}
 									direction={"right"}
 									keywords={barAMangerKeywords}

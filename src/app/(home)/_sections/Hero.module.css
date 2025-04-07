@@ -31,11 +31,13 @@
 }
 
 .heroText {
-	width: 100%;
+	width: fit-content;
 	display: flex;
 	flex-direction: column;
+	align-self: flex-end;
 	text-align: right;
 	gap: 1rem;
+	position: relative;
 
 	h1,
 	h2 {
@@ -57,6 +59,7 @@
 	h1 {
 		font-family: var(--font-bebas-neue);
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
+		z-index: 1;
 
 		@media (width <= 475px) {
 			text-align: left;
@@ -69,5 +72,20 @@
 		font-size: clamp(0.65rem, 0.425rem + 0.95vw, 1.25rem);
 		font-weight: 400;
 		transform: translateY(-10px);
+	}
+}
+
+.stickerWrapper {
+	position: absolute;
+	bottom: 80%;
+	right: -5px;
+	transform: rotate(24deg);
+	z-index: 0;
+	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 }
