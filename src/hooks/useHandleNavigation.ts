@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useLenisScrollTo } from "@/hooks/useLenisScrollTo";
 import { useLenis } from "lenis/react";
 
 export function useHandleNavigation(pathname: string, toggleMenu?: () => void) {
