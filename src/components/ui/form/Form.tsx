@@ -11,8 +11,11 @@ const Form = () => {
 						id="name"
 						name="name"
 						required
+						className={styles.formInput}
 					/>
-					<label htmlFor="name">Nom</label>
+					<label className={styles.inputLabel} htmlFor="name">
+						Nom
+					</label>
 				</div>
 				<div>
 					<input
@@ -21,8 +24,11 @@ const Form = () => {
 						name="firstName"
 						id="firstName"
 						required
+						className={styles.formInput}
 					/>
-					<label htmlFor="firstName">Prénom</label>
+					<label className={styles.inputLabel} htmlFor="firstName">
+						Prénom
+					</label>
 				</div>
 				<div>
 					<input
@@ -31,8 +37,11 @@ const Form = () => {
 						name="email"
 						id="email"
 						required
+						className={styles.formInput}
 					/>
-					<label htmlFor="email">Email</label>
+					<label className={styles.inputLabel} htmlFor="email">
+						Email
+					</label>
 				</div>
 				<div>
 					<input
@@ -41,8 +50,11 @@ const Form = () => {
 						name="phoneNumber"
 						id="phoneNumber"
 						required
+						className={styles.formInput}
 					/>
-					<label htmlFor="phoneNumber">N° de téléphone...</label>
+					<label className={styles.inputLabel} htmlFor="phoneNumber">
+						N° de téléphone...
+					</label>
 				</div>
 			</div>
 			<div className={styles.textareaContainer}>
@@ -53,7 +65,9 @@ const Form = () => {
 					id="message"
 					required
 				></textarea>
-				<label htmlFor="message">Message</label>
+				<label className={styles.textareaLabel} htmlFor="message">
+					Message
+				</label>
 			</div>
 			<div className={styles.buttonContainer}>
 				<button className={styles.button}>Envoyer</button>

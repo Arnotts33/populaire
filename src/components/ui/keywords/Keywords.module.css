@@ -1,5 +1,5 @@
 .container {
-	p {
+	.keywords {
 		font-size: clamp(1rem, 0.8924rem + 0.5063vw, 1.5rem);
 		font-weight: 500;
 		line-height: 1.5;
