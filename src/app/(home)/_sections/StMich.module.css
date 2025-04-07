@@ -11,6 +11,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 
 	@media (width <= 768px) {
 		padding: 4rem 1rem;
@@ -93,5 +94,35 @@
 			width: 100%;
 			height: auto;
 		}
+	}
+}
+
+.stickerWrapper1 {
+	position: absolute;
+	z-index: 120;
+	bottom: 15%;
+	left: 20%;
+	transform: rotate(24deg);
+	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+.stickerWrapper2 {
+	position: absolute;
+	z-index: 120;
+	top: 60%;
+	right: 20%;
+	transform: rotate(-24deg);
+	width: clamp(7.5rem, 6.155rem + 6.329vw, 13.75rem);
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 }

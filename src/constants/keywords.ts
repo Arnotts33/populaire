@@ -1,5 +1,5 @@
 export const dwitchKeywords =
-	"grilled cheese • smash • tacos • populaire • smash • tacos • baguette •";
+	"grilled cheese • smash • take-away • tacos • populaire • smash •";
 
 export const barAMangerKeywords =
-	"partage • tapas • vins • assiette • convivialité • générosité • cuisine ouverte •";
+	"partage • tapas • vins natures • assiettes • générosité • cuisine ouverte •";

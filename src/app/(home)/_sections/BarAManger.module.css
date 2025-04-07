@@ -45,8 +45,6 @@
 		}
 
 		.albumBanner {
-			/* width: fit-content; */
-			/* align-self: flex-end; */
 			order: 1;
 			display: flex;
 			position: relative;
@@ -75,6 +73,7 @@
 				max-width: clamp(5.25rem, 2.9167rem + 6.9444vw, 11.25rem);
 				height: auto;
 				object-fit: cover;
+				display: block;
 			}
 
 			.keywordsContainer {

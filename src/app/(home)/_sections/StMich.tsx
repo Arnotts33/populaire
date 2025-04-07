@@ -1,5 +1,8 @@
 "use client";
+import Image from "next/image";
 import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Draggable } from "gsap/Draggable";
 import styles from "./StMich.module.css";
 import jujuCams from "@/assets/images/juju-cams.webp";
 import joPlonge from "@/assets/images/jo-plonge.webp";
@@ -7,11 +10,29 @@ import dorianPorchetta from "@/assets/images/dorian-porchetta.webp";
 import dorianSom from "@/assets/images/dorian-sommelier.webp";
 import window from "@/assets/images/window.webp";
 import wineFriends from "@/assets/images/wine-friends.webp";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import pinkSticker from "@/assets/images/sticker-pink.svg";
+import shineSticker from "@/assets/images/sticker-shine.webp";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 const StMich = () => {
 	const section = useRef<HTMLDivElement>(null);
+	const stickerPink = useRef<HTMLImageElement>(null);
+	const stickerShine = useRef<HTMLImageElement>(null);
+
+	useGSAP(() => {
+		gsap.registerPlugin(Draggable);
+
+		Draggable.create(stickerPink.current, {
+			bounds: section.current,
+			type: "x,y",
+		});
+
+		Draggable.create(stickerShine.current, {
+			bounds: section.current,
+			type: "x,y",
+		});
+	}, [stickerPink.current]);
 
 	const { scrollYProgress } = useScroll({
 		target: section,
@@ -52,6 +73,24 @@ const StMich = () => {
 							</motion.div>
 						);
 					})}
+				</div>
+				<div className={styles.stickerWrapper1}>
+					<Image
+						ref={stickerPink}
+						src={pinkSticker}
+						alt="Sticker"
+						className={styles.stickerPink}
+						width={150}
+					/>
+				</div>
+				<div className={styles.stickerWrapper2}>
+					<Image
+						ref={stickerShine}
+						src={shineSticker}
+						alt="Sticker"
+						className={styles.stickerShine}
+						width={180}
+					/>
 				</div>
 			</div>
 		</section>

@@ -31,7 +31,7 @@ const Dwitches = () => {
 							/>
 							<div className={styles.keywordsContainer}>
 								<SlidingKeywords
-									left={"-%"}
+									left={"-12%"}
 									progress={scrollYProgress}
 									direction={"left"}
 									keywords={dwitchKeywords}
@@ -59,7 +59,7 @@ const Dwitches = () => {
 				</div>
 				<div className={styles.bottomContent}>
 					<p className={styles.descriptionText}>
-						Du mercredi au samedi midi, on sort les Dwitches. Du bon pain de
+						Du mercredi au samedi midi, on sort les dwitches. Du bon pain de
 						chez Cérès, des produits de qualité, garniture aux petits soins,
 						tout bien cuisiné comme il faut. Simple, efficace, ultra gourmand.
 						Passe quand tu veux, ça se croque sur place ou à embarquer, selon

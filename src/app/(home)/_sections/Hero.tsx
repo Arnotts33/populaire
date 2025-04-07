@@ -23,23 +23,27 @@ const Hero = () => {
 
 	return (
 		<section ref={section} className={styles.hero}>
-			<Image
-				src={heroImg}
-				alt="Kitchen"
-				className={styles.heroImg}
-				priority={true}
-			/>
-			<div className={styles.heroText}>
-				<div className={styles.stickerWrapper}>
+			<div className={styles.heroContent}>
+				<div className={styles.heroImgWrapper}>
 					<Image
-						ref={sticker}
-						src={pinkSticker}
-						alt="Sticker"
-						className={styles.sticker}
+						src={heroImg}
+						alt="Kitchen"
+						className={styles.heroImg}
+						priority={true}
 					/>
 				</div>
-				<h1>Dwitcherie</h1>
-				<h2>Bar à Manger, Cave à vins</h2>
+				<div className={styles.heroText}>
+					<div className={styles.stickerWrapper}>
+						<Image
+							ref={sticker}
+							src={pinkSticker}
+							alt="Sticker"
+							className={styles.sticker}
+						/>
+					</div>
+					<h1>Dwitcherie</h1>
+					<h2>bar à manger, cave à vins</h2>
+				</div>
 			</div>
 		</section>
 	);

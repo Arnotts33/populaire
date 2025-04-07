@@ -43,13 +43,13 @@ const BarAManger = () => {
 							</div>
 							<div className={styles.keywordsContainer}>
 								<SlidingKeywords
-									left={"-5%"}
+									left={"-2%"}
 									progress={scrollYProgress}
 									direction={"left"}
 									keywords={barAMangerKeywords}
 								/>
 								<SlidingKeywords
-									left={"-18%"}
+									left={"-12%"}
 									progress={scrollYProgress}
 									direction={"right"}
 									keywords={barAMangerKeywords}
