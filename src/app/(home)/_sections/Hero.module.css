@@ -79,7 +79,7 @@
 		text-rendering: optimizeLegibility;
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
 		z-index: 1;
-		background: rgba(255, 0, 0, 0.2);
+		/* background: rgba(255, 0, 0, 0.2); */
 
 		@media (width <= 475px) {
 			text-align: center;
@@ -89,7 +89,7 @@
 
 	@supports (-webkit-touch-callout: none) {
 		.mainTitle {
-			letter-spacing: -0.05em;
+			letter-spacing: -0.055em;
 		}
 	}
 
