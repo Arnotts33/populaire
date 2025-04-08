@@ -89,7 +89,7 @@
 
 	@supports (-webkit-touch-callout: none) {
 		.mainTitle {
-			letter-spacing: -0.1em;
+			letter-spacing: -0.05em;
 		}
 	}
 
