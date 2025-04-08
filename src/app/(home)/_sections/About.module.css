@@ -3,6 +3,7 @@
 	font-family: var(--font-poppins);
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .aboutContent {
