@@ -1,6 +1,6 @@
 .hero {
 	width: 100%;
-	height: 100dvh;
+	height: 100svh;
 	overflow: hidden;
 	padding-block: 10rem 5rem;
 	position: relative;
@@ -25,9 +25,14 @@
 	}
 }
 
+@media (width <= 640px) {
+	.heroContent {
+		padding-bottom: 2rem;
+	}
+}
 .heroImgWrapper {
 	width: 100%;
-	height: 85%;
+	height: 75%;
 	overflow: hidden;
 }
 
@@ -74,6 +79,7 @@
 		text-rendering: optimizeLegibility;
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
 		z-index: 1;
+		/* background: rgba(255, 0, 0, 0.2); */
 
 		@media (width <= 475px) {
 			text-align: left;
@@ -99,7 +105,8 @@
 	position: absolute;
 	bottom: 85%;
 	right: 0;
-	transform: translateX(8px) rotate(24deg);
+	transform: translate(5px 0);
+	transform: rotate(24deg);
 	z-index: 0;
 	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
 
