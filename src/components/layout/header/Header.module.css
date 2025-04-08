@@ -93,6 +93,7 @@
 	width: 100%;
 	position: relative;
 	z-index: 1;
+	will-change: transform, rotate;
 
 	&::after,
 	&::before {
@@ -104,6 +105,9 @@
 		background-color: black;
 		position: relative;
 		transition: transform 0.3s;
+		will-change: transform, rotate;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 
 	&::after {
@@ -118,16 +122,24 @@
 }
 
 .burgerActive {
+	will-change: transform, rotate;
+
 	&::after {
 		animation: downward 0.3s ease-in-out;
 		transform: translateY(4px) rotate(45deg);
 		-webkit-transform: translateY(4px) rotate(45deg);
+		will-change: transform, rotate;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 
 	&::before {
 		animation: upward 0.3s ease-in-out;
 		transform: translateY(-4px) rotate(-45deg);
 		-webkit-transform: translateY(-4px) rotate(-45deg);
+		will-change: transform, rotate;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 }
 
