@@ -108,10 +108,12 @@
 
 	&::after {
 		top: -5px;
+		animation: upbackward 0.3s ease-in-out;
 	}
 
 	&::before {
 		top: 5px;
+		animation: downbackward 0.3s ease-in-out;
 	}
 }
 
@@ -119,35 +121,73 @@
 	&::after {
 		animation: downward 0.3s ease-in-out;
 		transform: translateY(4px) rotate(45deg);
+		-webkit-transform: translateY(4px) rotate(45deg);
 	}
 
 	&::before {
 		animation: upward 0.3s ease-in-out;
 		transform: translateY(-4px) rotate(-45deg);
+		-webkit-transform: translateY(-4px) rotate(-45deg);
 	}
 }
 
 @keyframes downward {
 	0% {
 		transform: translateY(0px) rotate(0deg);
+		-webkit-transform: translateY(0px) rotate(0deg);
 	}
 	50% {
 		transform: translateY(4px) rotate(0deg);
+		-webkit-transform: translateY(4px) rotate(0deg);
 	}
 	100% {
 		transform: translateY(4px) rotate(45deg);
+		-webkit-transform: translateY(4px) rotate(45deg);
 	}
 }
 
 @keyframes upward {
 	0% {
 		transform: translateY(0px) rotate(0deg);
+		-webkit-transform: translateY(0px) rotate(0deg);
 	}
 	50% {
 		transform: translateY(-4px) rotate(0deg);
+		-webkit-transform: translateY(-4px) rotate(0deg);
 	}
 	100% {
 		transform: translateY(-4px) rotate(-45deg);
+		-webkit-transform: translateY(-4px) rotate(-45deg);
+	}
+}
+
+@keyframes upbackward {
+	0% {
+		transform: translateY(4px) rotate(45deg);
+		-webkit-transform: translateY(4px) rotate(45deg);
+	}
+	50% {
+		transform: translateY(4px) rotate(0deg);
+		-webkit-transform: translateY(4px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(0deg);
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+}
+
+@keyframes downbackward {
+	0% {
+		transform: translateY(-4px) rotate(-45deg);
+		-webkit-transform: translateY(-4px) rotate(-45deg);
+	}
+	50% {
+		transform: translateY(-4px) rotate(0deg);
+		-webkit-transform: translateY(-4px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(0deg);
+		-webkit-transform: translateY(0px) rotate(0deg);
 	}
 }
 
@@ -193,12 +233,20 @@
 .topLine,
 .bottomLine,
 .middleLine {
-	transition: transform 0.3s ease-in 0.3s, rotate 0.3s ease-in, opacity 0s 0.3s;
+	transition: rotate 0.3s ease-in, transform 0.3s ease-in 0.3s, opacity 0s 0.3s;
 	transform-origin: center;
+	will-change: rotate, opacity, transform;
 }
 
-.mobileBurgerActive :is(.topLine, .bottomLine, .middleLine) {
-	transition: transform 0.3s ease-in, rotate 0.3s ease-in 0.3s, opacity 0s 0.3s;
+.mobileBurgerActive {
+	.topLine,
+	.bottomLine,
+	.middleLine {
+		transition: transform 0.3s ease-in, rotate 0.3s ease-in 0.3s,
+			opacity 0s 0.3s;
+		transform-origin: center;
+		will-change: transform, opacity, rotate;
+	}
 }
 
 /* .mobileBurgerActive :is(.topLine, .bottomLine) {
