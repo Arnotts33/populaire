@@ -60,8 +60,8 @@ const Footer = () => {
 							</Link>
 						))}
 				</div>
-				<div className={styles.footerTitle}>
-					<h1>Populaire</h1>
+				<div className={styles.footerTitleContainer}>
+					<h1 className={styles.title}>Populaire</h1>
 				</div>
 				<div className={styles.footerInfo}>
 					<div className={styles.footerInfoItem}>

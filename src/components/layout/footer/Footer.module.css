@@ -72,9 +72,9 @@
 	}
 }
 
-.footerTitle h1 {
+.footerTitleContainer .title {
 	font-family: var(--font-bebas-neue);
-	font-size: clamp(6.25rem, -0.231rem + 30.1444vw, 48rem);
+	font-size: clamp(5.5rem, -0.1416rem + 30.0885vw, 48rem);
 	font-weight: 400;
 	text-align: center;
 	overflow: hidden;

@@ -116,7 +116,7 @@
 				}
 
 				@media (width <= 640px) {
-					font-size: clamp(4.25rem, -0.5667rem + 22.6667vw, 8.5rem);
+					font-size: clamp(3.75rem, -0.4412rem + 22.3529vw, 8.5rem);
 					padding: 0;
 					text-align: center;
 				}

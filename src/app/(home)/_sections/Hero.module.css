@@ -74,8 +74,8 @@
 		z-index: 1;
 
 		@media (width <= 475px) {
-			text-align: left;
-			font-size: clamp(5.25rem, -0.5426rem + 27.2593vw, 7.55rem);
+			text-align: center;
+			font-size: clamp(4.625rem, -0.3893rem + 26.7429vw, 7.55rem);
 		}
 	}
 
