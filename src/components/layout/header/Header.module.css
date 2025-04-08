@@ -87,17 +87,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
 }
 
 .burger {
 	width: 100%;
 	position: relative;
 	z-index: 1;
-	will-change: transform, rotate;
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
 
 	&::after,
 	&::before {
@@ -126,10 +121,6 @@
 }
 
 .burgerActive {
-	will-change: transform, rotate;
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
-
 	&::after {
 		animation: downward 0.3s ease-in-out;
 		transform: translateY(4px) rotate(45deg);
@@ -158,10 +149,10 @@
 		transform: translateY(4px) rotate(0deg);
 		-webkit-transform: translateY(4px) rotate(0deg);
 	}
-	100% {
+	/* 100% {
 		transform: translateY(4px) rotate(45deg);
 		-webkit-transform: translateY(4px) rotate(45deg);
-	}
+	} */
 }
 
 @keyframes upward {
@@ -173,10 +164,10 @@
 		transform: translateY(-4px) rotate(0deg);
 		-webkit-transform: translateY(-4px) rotate(0deg);
 	}
-	100% {
+	/* 100% {
 		transform: translateY(-4px) rotate(-45deg);
 		-webkit-transform: translateY(-4px) rotate(-45deg);
-	}
+	} */
 }
 
 @keyframes upbackward {
@@ -188,10 +179,10 @@
 		transform: translateY(4px) rotate(0deg);
 		-webkit-transform: translateY(4px) rotate(0deg);
 	}
-	100% {
+	/* 100% {
 		transform: translateY(0px) rotate(0deg);
 		-webkit-transform: translateY(0px) rotate(0deg);
-	}
+	} */
 }
 
 @keyframes downbackward {
@@ -203,10 +194,10 @@
 		transform: translateY(-4px) rotate(0deg);
 		-webkit-transform: translateY(-4px) rotate(0deg);
 	}
-	100% {
+	/* 100% {
 		transform: translateY(0px) rotate(0deg);
 		-webkit-transform: translateY(0px) rotate(0deg);
-	}
+	} */
 }
 
 .overlay {
