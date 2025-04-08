@@ -182,23 +182,28 @@
 .hamburger {
 	fill: black;
 	transition: 1s;
+	-webkit-transition: 1s;
 	display: block;
 }
 
 .hamburger.mobileBurgerActive {
 	fill: white;
 	transition: 0.8s;
+	-webkit-transition: 0.8s;
 }
 
 .topLine,
 .bottomLine,
 .middleLine {
 	transition: y 0.3s ease-in 0.3s, rotate 0.3s ease-in, opacity 0s 0.3s;
+	-webkit-transition: y 0.3s ease-in 0.3s, rotate 0.3s ease-in, opacity 0s 0.3s;
 	transform-origin: center;
+	-webkit-transform-origin: center;
 }
 
 .mobileBurgerActive :is(.topLine, .bottomLine, .middleLine) {
 	transition: y 0.3s ease-in, rotate 0.3s ease-in 0.3s, opacity 0s 0.3s;
+	-webkit-transition: y 0.3s ease-in, rotate 0.3s ease-in 0.3s, opacity 0s 0.3s;
 }
 
 .mobileBurgerActive :is(.topLine, .bottomLine) {
