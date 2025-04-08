@@ -1,4 +1,4 @@
-import { Poppins, Abril_Fatface } from "next/font/google";
+import { Poppins, Bebas_Neue, Abril_Fatface } from "next/font/google";
 import localFont from "next/font/local";
 
 export const poppins = Poppins({
@@ -7,10 +7,10 @@ export const poppins = Poppins({
 	variable: "--font-poppins",
 });
 
-export const bebasNeue = localFont({
-	src: "../fonts/BebasNeue.woff2",
+export const bebasNeue = Bebas_Neue({
+	subsets: ["latin"],
+	weight: ["400"],
 	variable: "--font-bebas-neue",
-	display: "swap",
 });
 
 export const nectoMono = localFont({
