@@ -44,6 +44,12 @@
 				object-position: center;
 			}
 		}
+
+		.counterDwitchImage {
+			@media (width <= 640px) {
+				object-position: bottom;
+			}
+		}
 	}
 }
 
