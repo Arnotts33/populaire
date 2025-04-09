@@ -32,18 +32,16 @@
 	font-family: var(--font-abril-fatface);
 	font-weight: 400;
 	text-transform: uppercase;
-	color: #ca4536;
+	color: #990f00;
 	z-index: 10;
 }
 
 .panelTextBottom {
-	font-size: clamp(1.125rem, 1.0712rem + 0.2532vw, 1.375rem);
+	font-size: clamp(1.125rem, 1.0556rem + 0.3704vw, 1.5rem);
 }
 
 .panelTextTop {
-	position: relative;
-	font-size: clamp(0.75rem, 0.6155rem + 0.6329vw, 1.375rem);
-	z-index: 2;
+	font-size: clamp(0.75rem, 0.6806rem + 0.3704vw, 1.125rem);
 }
 
 /* Reflection shapes */

@@ -111,7 +111,6 @@ const Header = () => {
 				<div onClick={handleToggleMenu} className={styles.headerButton}>
 					<button
 						className={styles.mobileBurger}
-						// onClick={handleToggleMenu}
 						aria-controls="mobile-menu"
 						aria-expanded={isActive}
 					>
