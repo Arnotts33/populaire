@@ -117,10 +117,6 @@
 	transform: rotate(24deg);
 	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
 
-	@media (height <= 680) {
-		bottom: 0;
-	}
-
 	.stickerPink {
 		width: 100%;
 		height: auto;
