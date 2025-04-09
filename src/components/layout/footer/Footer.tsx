@@ -65,7 +65,7 @@ const Footer = () => {
 				</div>
 				<div className={styles.footerInfo}>
 					<div className={styles.footerInfoItem}>
-						<h3 className={styles.itemTitle}>Adresse :</h3>
+						<h2 className={styles.itemTitle}>Adresse :</h2>
 						<p className={styles.itemText}>48 rue des Faures</p>
 						<p className={styles.itemText}>33000 Bordeaux</p>
 					</div>

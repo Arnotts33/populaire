@@ -101,14 +101,6 @@
 	margin-bottom: 2rem;
 	font-size: clamp(0.75rem, 0.6336rem + 0.5415vw, 1.5rem);
 
-	.itemTitle {
-		font-weight: 500;
-	}
-
-	.itemText {
-		font-family: var(--font-necto-mono);
-	}
-
 	@media (width < 720px) {
 		gap: 2rem;
 		flex-direction: column;
@@ -119,6 +111,14 @@
 		flex-direction: column;
 		gap: 1rem;
 		position: relative;
+
+		.itemTitle {
+			font-weight: 500;
+		}
+
+		.itemText {
+			font-family: var(--font-necto-mono);
+		}
 	}
 
 	.instaLogoImage {
