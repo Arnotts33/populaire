@@ -1,5 +1,13 @@
+import { Metadata } from "next";
 import Form from "@/components/ui/form/Form";
 import styles from "./page.module.css";
+
+// Metadata for the contact page
+export const metadata: Metadata = {
+	title: "Contact",
+	description:
+		"Restaurant sandwiches bar à manger à Bordeaux, quartier Saint Michel",
+};
 
 const Contact = () => {
 	return (

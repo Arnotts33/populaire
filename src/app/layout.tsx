@@ -6,18 +6,14 @@ import {
 	nectoMono,
 	abrilFatface,
 } from "@/assets/fonts/fonts";
-import Header from "@/components/layout/header/Header";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
+import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
-	title: "Populaire Dwitcherie",
+	title: { default: "Populaire Bordeaux", template: "%s | Populaire Bordeaux" },
 	description:
 		"Restaurant sandwiches bar à manger à Bordeaux, quartier Saint Michel",
-	icons: {
-		icon: "/favicon.ico",
-		shortcut: "/favicon-32x32.png",
-	},
 };
 
 export default function RootLayout({
