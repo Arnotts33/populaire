@@ -15,19 +15,19 @@ const Gallery = () => {
 				<div className={styles.galleryImagesContainer}>
 					<Image
 						src={counterDwitch}
-						alt="Grilled cheese sandwich on a counter"
+						alt="Grilled cheese sur le comptoir"
 						className={styles.counterDwitchImage}
 					/>
 
 					<Image
 						src={grilledSun}
-						alt="Grilled cheese under sunlight"
+						alt="Grilled cheese sur une table au soleil"
 						className={styles.grilledSunImage}
 					/>
 
 					<Image
 						src={chairs}
-						alt="Chairs along counter"
+						alt="Chaises au comptoir"
 						className={styles.chairsImage}
 					/>
 				</div>
