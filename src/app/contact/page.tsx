@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
 	title: "Contact",
 	description:
-		"Restaurant sandwiches bar à manger à Bordeaux, quartier Saint Michel",
+		"Page de contact du restaurant Populaire Dwitcherie à Bordeaux, quartier Saint Michel. Écrivez-nous pour toute question ou collaboration.",
 };
 
 const Contact = () => {

@@ -11,7 +11,10 @@ import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
-	title: { default: "Populaire Bordeaux", template: "%s | Populaire Bordeaux" },
+	title: {
+		default: "Populaire Dwitcherie Bordeaux",
+		template: "%s | Populaire Dwitcherie Bordeaux",
+	},
 	description:
 		"Restaurant sandwiches bar à manger à Bordeaux, quartier Saint Michel",
 };
@@ -22,7 +25,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="fr">
 			<body
 				className={`${poppins.variable} ${bebasNeue.variable} ${nectoMono.variable} ${abrilFatface.variable}`}
 			>
