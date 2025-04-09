@@ -16,7 +16,34 @@ export const metadata: Metadata = {
 		template: "%s | Populaire Dwitcherie Bordeaux",
 	},
 	description:
-		"Restaurant sandwiches bar à manger à Bordeaux, quartier Saint Michel",
+		"Populaire, sandwiches et restaurant bar à manger à Bordeaux, quartier Saint Michel. Sandwiches cuisinés, vin nature, ambiance conviviale.",
+	keywords: [
+		"sandwich Bordeaux",
+		"bar à vins Bordeaux",
+		"restaurant Bordeaux Saint Michel",
+		"vins naturels Bordeaux",
+		"bar à manger Bordeaux",
+		"restaurant Bordeaux",
+		"Cave à vins Bordeaux",
+	],
+	openGraph: {
+		title: "Populaire Dwitcherie Bordeaux",
+		description:
+			"Populaire à Bordeaux St Michel : vins naturels, sandwiches artisanaux et cave à emporter.",
+		url: "https://populairebordeaux.fr",
+		type: "website",
+		locale: "fr_FR",
+		siteName: "Populaire Bordeaux",
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+		},
+	},
 };
 
 export default function RootLayout({
