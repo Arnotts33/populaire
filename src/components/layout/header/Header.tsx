@@ -109,11 +109,49 @@ const Header = () => {
 			{/* Burger Menu on Scroll */}
 			<div ref={buttonRef} className={styles.headerButtonContainer}>
 				<div onClick={handleToggleMenu} className={styles.headerButton}>
-					<div
-						className={`${styles.burger} ${
-							isActive ? styles.burgerActive : ""
-						}`}
-					></div>
+					<button
+						className={styles.mobileBurger}
+						// onClick={handleToggleMenu}
+						aria-controls="mobile-menu"
+						aria-expanded={isActive}
+					>
+						<svg
+							className={`${styles.hamburger} ${
+								isActive ? styles.mobileBurgerActive : ""
+							}`}
+							viewBox="0 0 100 100"
+							width={50}
+						>
+							<rect
+								className={styles.topLine}
+								width={80}
+								height={10}
+								x={10}
+								y={25}
+							></rect>
+							<rect
+								className={styles.middleLine}
+								width={80}
+								height={6}
+								x={10}
+								y={52}
+							></rect>
+							<rect
+								className={styles.middleLine}
+								width={80}
+								height={6}
+								x={10}
+								y={42}
+							></rect>
+							<rect
+								className={styles.bottomLine}
+								width={80}
+								height={10}
+								x={10}
+								y={65}
+							></rect>
+						</svg>
+					</button>
 				</div>
 			</div>
 
