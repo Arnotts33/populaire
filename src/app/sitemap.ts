@@ -1,6 +1,6 @@
 import { type MetadataRoute } from "next";
 
-export async function GET(): Promise<MetadataRoute.Sitemap> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	return [
 		{
 			url: "https://populairebordeaux.fr/",
