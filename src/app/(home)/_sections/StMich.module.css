@@ -62,7 +62,7 @@
 
 	@media screen and (max-height: 800px) {
 		height: calc(80dvh - 10dvh);
-		min-height: 400px;
+		min-height: 480px;
 		padding: 4dvh 2rem;
 	}
 
@@ -70,6 +70,13 @@
 		height: calc(85dvh - 8dvh);
 		min-height: 350px;
 		padding: 3dvh 2rem;
+	}
+
+	@media screen and (width <= 768px) {
+		height: calc(
+			75vh - 10vh
+		); /* Use vh instead of dvh for more consistent behavior */
+		will-change: transform; /* Optimize for animations */
 	}
 
 	.imageContainer {

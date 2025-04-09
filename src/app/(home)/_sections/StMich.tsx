@@ -41,7 +41,7 @@ const StMich = () => {
 
 	const sm = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
-	const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
+	const md = useTransform(scrollYProgress, [0, 1], [0, -170]);
 
 	const lg = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
