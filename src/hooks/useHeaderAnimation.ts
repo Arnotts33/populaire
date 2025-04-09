@@ -2,7 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { RefObject, useEffect } from "react";
+import { RefObject } from "react";
 import { usePathname } from "next/navigation";
 
 export const useHeaderAnimation = (
