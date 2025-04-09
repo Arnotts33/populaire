@@ -10,6 +10,7 @@ const BurgerButton = ({ toggleMenu, isActive }: BurgerButtonProps) => {
 		<button
 			className={styles.mobileBurger}
 			onClick={toggleMenu}
+			aria-label="Toggle navigation"
 			aria-controls="mobile-menu"
 			aria-expanded={isActive}
 		>
