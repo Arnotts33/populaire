@@ -7,7 +7,7 @@ import footerPattern from "@/assets/images/footer-pattern.svg";
 import { navItems } from "@/constants/navItems";
 import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import instagramIcon from "@/assets/icons/instagram.svg";
-import OpeningTimes from "@/components/ui/OpeningTimes";
+import OpeningTimes from "@/components/ui/openingTimes/OpeningTimes";
 
 const Footer = () => {
 	const pathname = usePathname();

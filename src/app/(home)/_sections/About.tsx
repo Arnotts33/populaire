@@ -1,4 +1,4 @@
-import OpeningTimes from "@/components/ui/OpeningTimes";
+import OpeningTimes from "@/components/ui/openingTimes/OpeningTimes";
 import styles from "./About.module.css";
 import Image from "next/image";
 import mascotte from "@/assets/images/mascotte.svg";

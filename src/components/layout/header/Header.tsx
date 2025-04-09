@@ -11,6 +11,7 @@ import SideNav from "../nav/SideNav";
 import logoImg from "@/assets/images/logo-header.svg";
 import { useHeaderAnimation } from "@/hooks/useHeaderAnimation";
 import { useBodyScrollLock } from "@/hooks/useBodyScrollLock";
+import BurgerButton from "@/components/ui/burgerButton/BurgerButton";
 
 const Header = () => {
 	const buttonRef = useRef<HTMLDivElement>(null);
@@ -60,97 +61,14 @@ const Header = () => {
 
 				{/* Burger Menu on Small Devices */}
 				<div className={styles.mobileMenuContainer}>
-					<button
-						className={styles.mobileBurger}
-						onClick={handleToggleMenu}
-						aria-controls="mobile-menu"
-						aria-expanded={isActive}
-					>
-						<svg
-							className={`${styles.hamburger} ${
-								isActive ? styles.mobileBurgerActive : ""
-							}`}
-							viewBox="0 0 100 100"
-							width={50}
-						>
-							<rect
-								className={styles.topLine}
-								width={80}
-								height={10}
-								x={10}
-								y={25}
-							></rect>
-							<rect
-								className={styles.middleLine}
-								width={80}
-								height={6}
-								x={10}
-								y={52}
-							></rect>
-							<rect
-								className={styles.middleLine}
-								width={80}
-								height={6}
-								x={10}
-								y={42}
-							></rect>
-							<rect
-								className={styles.bottomLine}
-								width={80}
-								height={10}
-								x={10}
-								y={65}
-							></rect>
-						</svg>
-					</button>
+					<BurgerButton toggleMenu={handleToggleMenu} isActive={isActive} />
 				</div>
 			</header>
 
 			{/* Burger Menu on Scroll */}
 			<div ref={buttonRef} className={styles.headerButtonContainer}>
 				<div onClick={handleToggleMenu} className={styles.headerButton}>
-					<button
-						className={styles.mobileBurger}
-						aria-controls="mobile-menu"
-						aria-expanded={isActive}
-					>
-						<svg
-							className={`${styles.hamburger} ${
-								isActive ? styles.mobileBurgerActive : ""
-							}`}
-							viewBox="0 0 100 100"
-							width={50}
-						>
-							<rect
-								className={styles.topLine}
-								width={80}
-								height={10}
-								x={10}
-								y={25}
-							></rect>
-							<rect
-								className={styles.middleLine}
-								width={80}
-								height={6}
-								x={10}
-								y={52}
-							></rect>
-							<rect
-								className={styles.middleLine}
-								width={80}
-								height={6}
-								x={10}
-								y={42}
-							></rect>
-							<rect
-								className={styles.bottomLine}
-								width={80}
-								height={10}
-								x={10}
-								y={65}
-							></rect>
-						</svg>
-					</button>
+					<BurgerButton toggleMenu={handleToggleMenu} isActive={isActive} />
 				</div>
 			</div>
 

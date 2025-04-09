@@ -1,0 +1,68 @@
+/* MOBILE BURGER BUTTON */
+/* --------------------------------------- */
+@media (width > 760px) {
+	.mobileMenuContainer {
+		display: none;
+	}
+}
+.mobileBurger {
+	background: transparent;
+	border: none;
+	position: relative;
+	z-index: 1000;
+	display: block;
+}
+
+.hamburger {
+	fill: black;
+	transition: 1s;
+	display: block;
+}
+
+.hamburger.mobileBurgerActive {
+	fill: white;
+	transition: 0.8s;
+}
+
+.topLine,
+.bottomLine,
+.middleLine {
+	transition: rotate 0.3s ease-in, transform 0.3s ease-in 0.3s, opacity 0s 0.3s;
+	transform-origin: center;
+	will-change: rotate, opacity, transform;
+}
+
+.mobileBurgerActive {
+	.topLine,
+	.bottomLine,
+	.middleLine {
+		transition: transform 0.3s ease-in, rotate 0.3s ease-in 0.3s,
+			opacity 0s 0.3s;
+		transform-origin: center;
+		will-change: transform, opacity, rotate;
+	}
+}
+
+/* .mobileBurgerActive :is(.topLine, .bottomLine) {
+	y: 45;
+} */
+
+.mobileBurgerActive .topLine {
+	transform: translateY(20px);
+}
+
+.mobileBurgerActive .bottomLine {
+	transform: translateY(-20px);
+}
+
+.mobileBurgerActive .topLine {
+	rotate: 45deg;
+}
+
+.mobileBurgerActive .bottomLine {
+	rotate: -45deg;
+}
+
+.mobileBurgerActive .middleLine {
+	opacity: 0;
+}

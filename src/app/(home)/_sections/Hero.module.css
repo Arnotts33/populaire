@@ -79,7 +79,6 @@
 		text-rendering: optimizeLegibility;
 		font-size: clamp(6.2rem, 5.25rem + 3.5vw, 12rem);
 		z-index: 1;
-		/* background: rgba(255, 0, 0, 0.2); */
 
 		@media (width <= 475px) {
 			text-align: left;
@@ -103,12 +102,11 @@
 
 .stickerWrapper {
 	position: absolute;
-	bottom: 85%;
+	bottom: 88%;
 	right: 0;
-	transform: translate(5px 0);
-	transform: rotate(24deg);
+	transform: translateX(12px) rotate(24deg);
 	z-index: 0;
-	width: clamp(5rem, 3.924rem + 5.063vw, 10rem);
+	width: clamp(3.5rem, 2.2963rem + 6.4198vw, 10rem);
 
 	.sticker {
 		width: 100%;
