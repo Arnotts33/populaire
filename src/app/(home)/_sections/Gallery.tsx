@@ -15,23 +15,20 @@ const Gallery = () => {
 				<div className={styles.galleryImagesContainer}>
 					<Image
 						src={counterDwitch}
-						alt="Counter Dwitch"
+						alt="Grilled cheese sandwich on a counter"
 						className={styles.counterDwitchImage}
-						width={600}
 					/>
 
 					<Image
 						src={grilledSun}
-						alt="Grilled Sun"
+						alt="Grilled cheese under sunlight"
 						className={styles.grilledSunImage}
-						width={600}
 					/>
 
 					<Image
 						src={chairs}
-						alt="Chairs"
+						alt="Chairs along counter"
 						className={styles.chairsImage}
-						width={600}
 					/>
 				</div>
 			</div>

@@ -1,9 +1,11 @@
 "use client";
+import styles from "./StMich.module.css";
 import Image from "next/image";
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { Draggable } from "gsap/Draggable";
-import styles from "./StMich.module.css";
+import { motion, useScroll, useTransform } from "framer-motion";
 import jujuCams from "@/assets/images/juju-cams.webp";
 import joPlonge from "@/assets/images/jo-plonge.webp";
 import dorianPorchetta from "@/assets/images/dorian-porchetta.webp";
@@ -12,8 +14,6 @@ import window from "@/assets/images/window.webp";
 import wineFriends from "@/assets/images/wine-friends.webp";
 import pinkSticker from "@/assets/images/sticker-pink.svg";
 import shineSticker from "@/assets/images/sticker-shine.webp";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
 
 const StMich = () => {
 	const section = useRef<HTMLDivElement>(null);
