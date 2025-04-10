@@ -17,6 +17,9 @@ export const metadata: Metadata = {
 	},
 	description:
 		"Populaire, sandwiches et restaurant bar à manger à Bordeaux, quartier Saint Michel. Sandwiches cuisinés, vin nature, ambiance conviviale.",
+	icons: {
+		icon: "/favicon.ico",
+	},
 	keywords: [
 		"sandwich Bordeaux",
 		"bar à vins Bordeaux",

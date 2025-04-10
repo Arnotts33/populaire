@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { menuSlide, slide } from "./animation";
 import { useHandleNavigation } from "@/hooks/useHandleNavigation";
 import { navItems } from "@/constants/navItems";
-import mascotte from "@/assets/images/mascotte-animate.gif";
+import mascotte from "@/assets/images/mascotte-animee.webp";
 
 const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 	const pathname = usePathname();
@@ -48,7 +48,12 @@ const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 							</motion.li>
 						))}
 					</ul>
-					<Image src={mascotte} alt="Mascotte" className={styles.mascotte} />
+					<Image
+						src={mascotte}
+						alt="Mascotte"
+						className={styles.mascotte}
+						unoptimized
+					/>
 				</nav>
 				<div className={styles.menuFooter}>
 					<a
