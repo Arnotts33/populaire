@@ -1,8 +1,14 @@
+"use client";
+import useWeb3Form from "@/hooks/useWeb3Form";
 import styles from "./Form.module.css";
+import { FormEvent } from "react";
 
 const Form = () => {
+	const accessKey = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
+	const { handleSubmit, result, isSubmitting } = useWeb3Form(accessKey);
+
 	return (
-		<form className={styles.form} name="contact" method="POST">
+		<form className={styles.form} onSubmit={handleSubmit}>
 			<div className={styles.inputsContainer}>
 				<div>
 					<input
@@ -71,8 +77,12 @@ const Form = () => {
 				</label>
 			</div>
 			<div className={styles.buttonContainer}>
-				<button className={styles.button}>Envoyer</button>
+				<button className={styles.button} type="submit">
+					Envoyer
+				</button>
 			</div>
+			{isSubmitting && <p>Submitting</p>}
+			{result && <p className={styles.result}>{result}</p>}
 		</form>
 	);
 };
