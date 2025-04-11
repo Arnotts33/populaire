@@ -1,7 +1,6 @@
 "use client";
 import useWeb3Form from "@/hooks/useWeb3Form";
 import styles from "./Form.module.css";
-import { FormEvent } from "react";
 
 const Form = () => {
 	const accessKey = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
@@ -77,7 +76,12 @@ const Form = () => {
 				</label>
 			</div>
 			<div className={styles.buttonContainer}>
-				<button className={styles.button} type="submit">
+				<button
+					className={styles.button}
+					type="submit"
+					aria-label="Envoyer le formulaire"
+				>
+					{" "}
 					Envoyer
 				</button>
 			</div>
