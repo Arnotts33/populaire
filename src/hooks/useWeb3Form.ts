@@ -26,6 +26,7 @@ export default function useWeb3Form(accessKey: string) {
 					email: formData.get("email"),
 					phoneNumber: formData.get("phoneNumber"),
 					message: formData.get("message"),
+					subject: "Nouveau message du formulaire de contact",
 				}),
 			});
 

@@ -41,6 +41,7 @@ const Form = () => {
 						placeholder="Votre email..."
 						name="email"
 						id="email"
+						pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
 						required
 						className={styles.formInput}
 					/>
@@ -54,6 +55,7 @@ const Form = () => {
 						placeholder="06..."
 						name="phoneNumber"
 						id="phoneNumber"
+						pattern="^0[1-9][0-9]{8}$"
 						required
 						className={styles.formInput}
 					/>
@@ -85,7 +87,7 @@ const Form = () => {
 					Envoyer
 				</button>
 			</div>
-			{isSubmitting && <p>Submitting</p>}
+			{isSubmitting && <p>Envoi en cours...</p>}
 			{result && <p className={styles.result}>{result}</p>}
 		</form>
 	);
