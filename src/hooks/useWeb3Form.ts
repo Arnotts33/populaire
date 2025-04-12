@@ -13,13 +13,6 @@ export const useWeb3Form = (accessKey: string): UseWeb3FormReturn => {
 		const form = e.currentTarget;
 		const data = new FormData(form);
 
-		// honeypot check
-		if (data.get("website")) {
-			setStatus("error");
-			setMessage("Spam détecté !");
-			return;
-		}
-
 		const payload: FormValues & { access_key: string; subject: string } = {
 			access_key: accessKey,
 			Nom: data.get("name") as string,
@@ -54,6 +47,7 @@ export const useWeb3Form = (accessKey: string): UseWeb3FormReturn => {
 				setMessage("Une erreur est survenue. Merci de réessayer.");
 			}
 		} catch (error) {
+			console.error("Error:", error);
 			setStatus("error");
 			setMessage("Erreur réseau. Vérifiez votre connexion.");
 		} finally {

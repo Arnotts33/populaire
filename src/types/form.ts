@@ -4,7 +4,6 @@ type FormValues = {
 	email: string;
 	Téléphone: string;
 	message: string;
-	website?: string; // champ honeypot
 };
 
 type UseWeb3FormReturn = {
