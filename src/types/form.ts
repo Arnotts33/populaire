@@ -1,6 +1,8 @@
 type FormValues = {
-	name: string;
+	Nom: string;
+	Prénom: string;
 	email: string;
+	Téléphone: string;
 	message: string;
 	website?: string; // champ honeypot
 };

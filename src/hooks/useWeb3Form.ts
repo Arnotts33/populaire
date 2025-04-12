@@ -22,10 +22,12 @@ export const useWeb3Form = (accessKey: string): UseWeb3FormReturn => {
 
 		const payload: FormValues & { access_key: string; subject: string } = {
 			access_key: accessKey,
-			name: data.get("name") as string,
+			Nom: data.get("name") as string,
+			Prénom: data.get("firstName") as string,
 			email: data.get("email") as string,
+			Téléphone: data.get("phoneNumber") as string,
 			message: data.get("message") as string,
-			subject: "📬 Nouveau message depuis Populaire Bordeaux",
+			subject: "Nouveau message depuis Populaire Bordeaux",
 		};
 
 		setIsSubmitting(true);
