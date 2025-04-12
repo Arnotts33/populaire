@@ -1,57 +1,63 @@
 "use client";
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+import { FormValues, UseWeb3FormReturn } from "@/types/form";
 
-export default function useWeb3Form(accessKey: string) {
-	const [result, setResult] = useState<string>("");
-	const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+export const useWeb3Form = (accessKey: string): UseWeb3FormReturn => {
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+	const [message, setMessage] = useState("");
 
-	async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		setIsSubmitting(true);
 
 		const form = e.currentTarget;
-		const formData = new FormData(form);
+		const data = new FormData(form);
+
+		// honeypot check
+		if (data.get("website")) {
+			setStatus("error");
+			setMessage("Spam détecté !");
+			return;
+		}
+
+		const payload: FormValues & { access_key: string; subject: string } = {
+			access_key: accessKey,
+			name: data.get("name") as string,
+			email: data.get("email") as string,
+			message: data.get("message") as string,
+			subject: "📬 Nouveau message depuis Populaire Bordeaux",
+		};
+
+		setIsSubmitting(true);
+		setStatus("idle");
 
 		try {
-			const response = await fetch("https://api.web3forms.com/submit", {
+			const res = await fetch("https://api.web3forms.com/submit", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 					Accept: "application/json",
 				},
-				body: JSON.stringify({
-					access_key: accessKey,
-					name: formData.get("name"),
-					firstName: formData.get("firstName"),
-					email: formData.get("email"),
-					phoneNumber: formData.get("phoneNumber"),
-					message: formData.get("message"),
-					subject: "Nouveau message du formulaire de contact",
-				}),
+				body: JSON.stringify(payload),
 			});
 
-			const result = await response.json();
+			const result = await res.json();
 
 			if (result.success) {
-				setResult(
-					"Merci pour votre message ! Nous vous répondrons dès que possible."
-				);
+				setStatus("success");
+				setMessage("Merci ! Votre message a bien été envoyé.");
 				form.reset();
-				console.log(result);
 			} else {
-				setResult(result.message);
-				console.log(result);
+				setStatus("error");
+				setMessage("Une erreur est survenue. Merci de réessayer.");
 			}
 		} catch (error) {
-			console.error("Error:", error);
-			setResult("Une erreur s'est produite lors de l'envoi du formulaire.");
+			setStatus("error");
+			setMessage("Erreur réseau. Vérifiez votre connexion.");
 		} finally {
 			setIsSubmitting(false);
 		}
-	}
-	return {
-		handleSubmit,
-		result,
-		isSubmitting,
 	};
-}
+
+	return { isSubmitting, status, message, handleSubmit };
+};

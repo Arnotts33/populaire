@@ -1,12 +1,14 @@
 "use client";
-import useWeb3Form from "@/hooks/useWeb3Form";
+import { useWeb3Form } from "@/hooks/useWeb3Form";
 import styles from "./Form.module.css";
 import Image from "next/image";
 import mascotte from "@/assets/images/mascotte-animee.webp";
 
+const ACCESS_KEY = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
+
 const Form = () => {
-	const accessKey = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
-	const { handleSubmit, result, isSubmitting } = useWeb3Form(accessKey);
+	const { handleSubmit, isSubmitting, status, message } =
+		useWeb3Form(ACCESS_KEY);
 
 	return (
 		<form className={styles.form} onSubmit={handleSubmit}>
@@ -97,7 +99,7 @@ const Form = () => {
 						Envoyer
 					</button>
 				)}
-				{result && <p className={styles.result}>{result}</p>}
+				{status !== "idle" && <p className={styles.messageResult}>{message}</p>}
 			</div>
 		</form>
 	);
