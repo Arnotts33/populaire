@@ -123,7 +123,7 @@
 
 .burgerActive {
 	&::after {
-		/* animation: downward 0.3s ease-in-out; */
+		animation: downward 0.3s ease-in-out;
 		transform: translateY(4px) rotate(45deg);
 		transition: translateY 0.3s ease-in-out rotate 0.3s ease-in-out;
 		-webkit-transform: translateY(4px) rotate(45deg);
@@ -133,7 +133,7 @@
 	}
 
 	&::before {
-		/* animation: upward 0.3s ease-in-out; */
+		animation: upward 0.3s ease-in-out;
 		transform: translateY(-4px) rotate(-45deg);
 		transition: translateY 0.3s ease-in-out rotate 0.3s ease-in-out;
 		-webkit-transform: translateY(-4px) rotate(-45deg);
