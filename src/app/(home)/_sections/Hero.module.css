@@ -84,7 +84,14 @@
 
 		@media (width <= 475px) {
 			text-align: left;
-			font-size: clamp(2.8rem, -0.4218rem + 25.545vw, 7.55rem);
+			font-size: clamp(2.9rem, -0.4818rem + 27.0545vw, 7.55rem);
+		}
+
+		@-moz-document url-prefix() {
+			@media (width <= 475px) {
+				text-align: left;
+				font-size: clamp(2.9rem, -0.4818rem + 25.7545vw, 7.55rem);
+			}
 		}
 	}
 
