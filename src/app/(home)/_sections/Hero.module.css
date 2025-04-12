@@ -28,12 +28,6 @@
 	}
 }
 
-/* @media (width <= 640px) {
-	.heroContent {
-		padding-bottom: 2rem;
-	}
-} */
-
 .heroImgWrapper {
 	width: 100%;
 	/* height: 75%; */
@@ -90,7 +84,7 @@
 
 		@media (width <= 475px) {
 			text-align: left;
-			font-size: clamp(2.9rem, -0.4818rem + 27.0545vw, 7.55rem);
+			font-size: clamp(2.8rem, -0.4218rem + 25.545vw, 7.55rem);
 		}
 	}
 
