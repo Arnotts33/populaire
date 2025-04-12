@@ -1,6 +1,8 @@
 "use client";
 import useWeb3Form from "@/hooks/useWeb3Form";
 import styles from "./Form.module.css";
+import Image from "next/image";
+import mascotte from "@/assets/images/mascotte-animee.webp";
 
 const Form = () => {
 	const accessKey = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
@@ -78,17 +80,25 @@ const Form = () => {
 				</label>
 			</div>
 			<div className={styles.buttonContainer}>
-				<button
-					className={styles.button}
-					type="submit"
-					aria-label="Envoyer le formulaire"
-				>
-					{" "}
-					Envoyer
-				</button>
+				{isSubmitting ? (
+					<Image
+						src={mascotte}
+						alt="Mascotte animée"
+						className={styles.mascotte}
+						unoptimized
+					/>
+				) : (
+					<button
+						className={styles.button}
+						type="submit"
+						aria-label="Envoyer le formulaire"
+					>
+						{" "}
+						Envoyer
+					</button>
+				)}
+				{result && <p className={styles.result}>{result}</p>}
 			</div>
-			{isSubmitting && <p>Envoi en cours...</p>}
-			{result && <p className={styles.result}>{result}</p>}
 		</form>
 	);
 };

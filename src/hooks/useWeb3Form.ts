@@ -33,7 +33,9 @@ export default function useWeb3Form(accessKey: string) {
 			const result = await response.json();
 
 			if (result.success) {
-				setResult(result.message);
+				setResult(
+					"Merci pour votre message ! Nous vous répondrons dès que possible."
+				);
 				form.reset();
 				console.log(result);
 			} else {
