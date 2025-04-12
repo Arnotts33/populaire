@@ -37,17 +37,11 @@
 
 .mobileBurgerActive .topLine {
 	transform: translateY(20px);
-}
-
-.mobileBurgerActive .bottomLine {
-	transform: translateY(-20px);
-}
-
-.mobileBurgerActive .topLine {
 	rotate: 45deg;
 }
 
 .mobileBurgerActive .bottomLine {
+	transform: translateY(-20px);
 	rotate: -45deg;
 }
 
