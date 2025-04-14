@@ -23,14 +23,13 @@
 		padding-block: 0.5rem;
 		padding-left: 0.5rem;
 		border: none;
-		border-bottom: 1.5px solid black;
+		border-bottom: 1.5px solid var(--border-black);
 		background-color: transparent;
-		color: black;
 		font-size: clamp(1rem, 0.8924rem + 0.5063vw, 1.5rem);
 
 		&:focus {
 			outline: none;
-			border-bottom: 2px solid black;
+			border-bottom: 2px solid var(--border-black);
 		}
 
 		&::placeholder {
@@ -50,16 +49,15 @@
 		width: 100%;
 		padding-block: 0.5rem;
 		padding-left: 1rem;
-		border: 1.5px solid black;
+		border: 1.5px solid var(--border-black);
 		border-radius: 1rem;
 		background-color: transparent;
 		font-family: var(--font-poppins);
-		color: black;
 		font-size: clamp(1rem, 0.8924rem + 0.5063vw, 1.5rem);
 
 		&:focus {
 			outline: none;
-			border: 2px solid black;
+			border: 2px solid var(--border-black);
 		}
 
 		&::placeholder {
@@ -85,10 +83,10 @@
 		text-transform: uppercase;
 		font-size: 1.25rem;
 		font-weight: 500;
-		background-color: black;
+		background-color: var(--button-primary-bg);
 		border-radius: 2rem;
 		padding: 15px 45px;
-		color: #ffff;
+		color: var(--text-light);
 		cursor: pointer;
 		transition: transform 0.2s ease-out;
 

@@ -1,6 +1,5 @@
 .barAMangerSection {
 	width: 100%;
-	font-family: var(--font-poppins);
 	overflow: hidden;
 }
 
@@ -27,7 +26,6 @@
 .topContent {
 	width: 100%;
 	display: flex;
-	/* gap: clamp(2rem, 0.5rem + 3.75vw, 5rem); */
 
 	@media (width <= 640px) {
 		flex-direction: column;

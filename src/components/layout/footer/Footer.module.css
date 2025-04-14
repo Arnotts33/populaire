@@ -1,7 +1,6 @@
 .footer {
 	width: 100%;
-	background-color: #fea8f1;
-	font-family: var(--font-poppins);
+	background-color: var(--bg-footer);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -51,8 +50,7 @@
 
 	.button {
 		width: 45%;
-		border: 1px solid black;
-		color: black;
+		border: 1px solid var(--border-black);
 		border-radius: 50px;
 		font-size: clamp(1.5rem, 3.5vw, 3rem);
 		text-align: center;
@@ -74,7 +72,6 @@
 }
 
 .footerTitleContainer .title {
-	font-family: var(--font-bebas-neue);
 	font-size: clamp(5.5rem, -0.1416rem + 30.0885vw, 48rem);
 	font-weight: 400;
 	text-align: center;

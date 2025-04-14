@@ -6,7 +6,6 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
-	font-family: var(--font-poppins);
 
 	.notFoundContainer {
 		position: relative;
@@ -15,8 +14,6 @@
 		.rightFour,
 		.leftFour {
 			font-size: clamp(8rem, 5.037rem + 15.8025vw, 24rem);
-			font-family: var(--font-bebas-neue);
-			color: #333;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -52,7 +49,7 @@
 		.homeLink {
 			font-size: clamp(0.75rem, 0.6462rem + 0.5031vw, 1.25rem);
 			transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-			border: 1px solid #333;
+			border: 1px solid var(--border-black);
 			border-radius: 50px;
 			padding: 1rem 2.5rem;
 			font-weight: 500;
@@ -62,9 +59,9 @@
 			}
 
 			&:hover {
-				background-color: #ed73aa;
-				color: #f0f0f0;
-				border: 1px solid #ed73aa;
+				background-color: var(--link-hover);
+				color: var(--text-light);
+				border: 1px solid var(--link-hover);
 			}
 		}
 	}

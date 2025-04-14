@@ -75,7 +75,6 @@
 	}
 
 	.mainTitle {
-		font-family: var(--font-bebas-neue);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility;
@@ -102,7 +101,6 @@
 	}
 
 	.subTitle {
-		font-family: var(--font-poppins);
 		font-size: clamp(0.65rem, 0.425rem + 0.95vw, 1.25rem);
 		font-weight: 400;
 		transform: translateY(-10px);

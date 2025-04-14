@@ -1,9 +1,51 @@
-VARIABLES :root {
+:root {
 	/* FONTS */
 	--font-poppins: var(--font-poppins);
 	--font-bebas-neue: var(--font-bebas-neue);
 	--font-necto-mono: var(--font-necto-mono);
 	--font-abril-fatface: var(--font-abril-fatface);
+
+	/* COLORS */
+
+	/* BRAND */
+	--color-brand: hsl(309, 98%, 83%);
+	--color-brand-dark: hsl(333, 77%, 69%);
+
+	/* NEUTRALS */
+	--color-black: hsl(198, 31%, 6%);
+	--color-white: hsl(60, 100%, 97%);
+
+	/* GREYS */
+	--gray-400: hsl(0, 0%, 78%);
+	--gray-500: hsl(0, 0%, 73%);
+	--gray-600: hsl(0, 0%, 66%);
+	--gray-700: hsl(0, 0%, 50%);
+	--gray-800: hsl(0, 0%, 24%);
+	--gray-900: hsl(0, 0%, 16%);
+
+	/* BACKGROUND */
+	--bg-main: var(--color-white);
+	--bg-footer: var(--color-brand);
+	--bg-side-nav: var(--gray-900);
+	--bg-menu-button: var(--color-brand-dark);
+
+	/* BORDERS */
+	--border-gray-light: var(--gray-400);
+	--border-gray-dark: var(--gray-700);
+	--border-black: var(--color-black);
+
+	/* TEXTS */
+	--text-main: var(--color-black);
+	--text-light: var(--color-white);
+	--text-gray-light: var(--gray-400);
+	--text-gray-dark: var(--gray-700);
+
+	/* BUTTONS */
+	--button-primary-bg: var(--color-black);
+	--button-primary-bg-hover: var(--color-brand);
+
+	/* LINKS */
+	--link-hover: var(--color-brand-dark);
 }
 
 /* SCROLL BLOCK WHEN MODAL OPEN */
@@ -36,7 +78,8 @@ html {
 
 body {
 	font-family: var(--font-poppins);
-	background-color: #f0f0f0;
+	background-color: var(--bg-main);
+	color: var(--color-black);
 	min-height: 100vh;
 	max-width: 100vw;
 	display: flex;
@@ -53,11 +96,19 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font: inherit;
 	/* outline: 1px solid red; */
 }
 
 main {
 	width: 100%;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 h1 {

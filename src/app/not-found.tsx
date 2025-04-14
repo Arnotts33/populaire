@@ -12,6 +12,7 @@ const NotFound = () => {
 					className={styles.notFoundImage}
 					src={panier}
 					alt="Panier à hotdog vide"
+					priority
 				/>
 				<h1 className={styles.rightFour}>4</h1>
 			</div>
