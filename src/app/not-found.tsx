@@ -20,7 +20,7 @@ const NotFound = () => {
 					Oups... Plus rien à manger par ici!
 				</p>
 				<Link href={"/"} className={styles.homeLink}>
-					Retour à l&apo;saccueil
+					Retour à l&apos;accueil
 				</Link>
 			</div>
 		</main>
