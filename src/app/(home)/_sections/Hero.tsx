@@ -3,6 +3,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import heroImg from "@/assets/images/dorian-kitchen.webp";
+import heroImgMobile from "@/assets/images/dorian-kitchen-mobile.webp";
 import styles from "./Hero.module.css";
 import pinkSticker from "@/assets/images/sticker-pink.svg";
 import { useRef } from "react";
@@ -27,9 +28,17 @@ const Hero = () => {
 				<div className={styles.heroImgWrapper}>
 					<Image
 						src={heroImg}
-						alt="Kitchen"
+						alt="Dorian en cuisine"
 						className={styles.heroImg}
-						priority={true}
+						priority
+						sizes="(min-width: 769px) 100vw"
+					/>
+					<Image
+						src={heroImgMobile}
+						alt="Dorian en cuisine"
+						className={styles.heroImgMobile}
+						priority
+						sizes="(max-width: 768px) 100vw"
 					/>
 				</div>
 				<div className={styles.heroText}>
