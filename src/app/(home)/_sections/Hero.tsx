@@ -48,6 +48,7 @@ const Hero = () => {
 							src={pinkSticker}
 							alt="Sticker"
 							className={styles.sticker}
+							priority
 						/>
 					</div>
 					<h1 className={styles.mainTitle}>Dwitcherie</h1>
