@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://populairebordeaux.fr
+
+# Sitemaps
+Sitemap: https://populairebordeaux.fr/sitemap.xml
