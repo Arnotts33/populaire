@@ -31,14 +31,14 @@ const Hero = () => {
 						alt="Dorian en cuisine"
 						className={styles.heroImg}
 						priority
-						sizes="(min-width: 769px) 100vw"
+						sizes="100vw"
 					/>
 					<Image
 						src={heroImgMobile}
 						alt="Dorian en cuisine"
 						className={styles.heroImgMobile}
 						priority
-						sizes="(max-width: 768px) 100vw"
+						sizes="100vw"
 					/>
 				</div>
 				<div className={styles.heroText}>
