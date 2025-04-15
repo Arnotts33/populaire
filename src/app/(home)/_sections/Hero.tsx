@@ -30,15 +30,15 @@ const Hero = () => {
 						src={heroImg}
 						alt="Dorian en cuisine"
 						className={styles.heroImg}
-						priority
-						sizes="100vw"
+						priority={true}
+						sizes="(min-width: 769px) 100vw"
 					/>
 					<Image
 						src={heroImgMobile}
 						alt="Dorian en cuisine"
 						className={styles.heroImgMobile}
-						priority
-						sizes="100vw"
+						priority={true}
+						sizes="(max-width: 768px) 100vw, 55vw"
 					/>
 				</div>
 				<div className={styles.heroText}>
@@ -48,7 +48,7 @@ const Hero = () => {
 							src={pinkSticker}
 							alt="Sticker"
 							className={styles.sticker}
-							priority
+							priority={true}
 						/>
 					</div>
 					<h1 className={styles.mainTitle}>Dwitcherie</h1>

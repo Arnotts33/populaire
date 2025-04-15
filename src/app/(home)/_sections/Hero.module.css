@@ -1,12 +1,11 @@
 .hero {
 	width: 100%;
-	min-height: 100svh;
 	overflow: hidden;
 	padding-block: 12rem 5rem;
 	position: relative;
 
 	@media (width <= 768px) {
-		padding-block: 8rem 3rem;
+		padding-block: 9rem 3rem;
 	}
 }
 
@@ -105,12 +104,6 @@
 			}
 		}
 	}
-
-	/* @supports (-webkit-touch-callout: none) {
-		.mainTitle {
-			letter-spacing: -0.055em;
-		}
-	} */
 
 	.subTitle {
 		font-size: clamp(0.65rem, 0.425rem + 0.95vw, 1.25rem);

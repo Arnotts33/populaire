@@ -34,7 +34,12 @@ const Header = () => {
 			<header id="header" className={styles.header}>
 				<div>
 					<Link href="/">
-						<Image src={logoImg} alt="Logo" className={styles.logo} priority />
+						<Image
+							src={logoImg}
+							alt="Logo"
+							className={styles.logo}
+							priority={true}
+						/>
 					</Link>
 				</div>
 
