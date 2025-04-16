@@ -34,7 +34,7 @@
 
 .heroImg {
 	width: 100%;
-	height: 65vh;
+	aspect-ratio: 16 / 9;
 	object-fit: cover;
 	display: block;
 
