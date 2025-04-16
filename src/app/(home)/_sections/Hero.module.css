@@ -5,7 +5,7 @@
 	position: relative;
 
 	@media (width <= 768px) {
-		padding-block: 9rem 3rem;
+		padding-block: 9rem 4rem;
 	}
 }
 
