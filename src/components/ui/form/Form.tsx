@@ -4,7 +4,7 @@ import styles from "./Form.module.css";
 import Image from "next/image";
 import mascotte from "@/assets/images/mascotte-animee.webp";
 
-const ACCESS_KEY = "49c64825-8d1a-4fde-9b75-5da2b5872dbc";
+const ACCESS_KEY = "a87862b9-ab28-401d-a411-e79a25d02ef9";
 
 const Form = () => {
 	const { handleSubmit, isSubmitting, status, message } =
