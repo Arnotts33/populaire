@@ -20,6 +20,8 @@ export const useHeaderAnimation = (
 			// Clear any existing ScrollTriggers to avoid duplicates
 			ScrollTrigger.getAll().forEach((st) => st.kill());
 
+			gsap.set(btn, { scale: 0 });
+
 			gsap.to(btn, {
 				scrollTrigger: {
 					trigger: document.documentElement,
