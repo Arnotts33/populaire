@@ -26,16 +26,13 @@ const Hero = () => {
 		<section ref={section} className={styles.hero}>
 			<div className={styles.heroContent}>
 				<div className={styles.heroImgWrapper}>
-					<picture>
-						<source media="(max-width: 540px)" srcSet={heroImgMobile.src} />
-						<Image
-							src={heroImg}
-							alt="Dorian en cuisine"
-							className={styles.heroImg}
-							priority={true}
-							sizes="(min-width: 769px) 100vw"
-						/>
-					</picture>
+					<Image
+						src={heroImg}
+						alt="Dorian en cuisine"
+						className={styles.heroImg}
+						priority
+						sizes="(max-width: 540px) 100vw, 1536px"
+					/>
 				</div>
 				<div className={styles.heroText}>
 					<div className={styles.stickerWrapper}>
