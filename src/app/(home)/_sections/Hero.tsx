@@ -29,7 +29,8 @@ const Hero = () => {
 						src={heroImg}
 						alt="Dorian en cuisine"
 						className={styles.heroImg}
-						priority={true}
+						priority
+						fill
 						sizes="(max-width: 540px) 100vw, 1536px"
 					/>
 				</div>
