@@ -3,7 +3,6 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import heroImg from "@/assets/images/dorian-kitchen.webp";
-import heroImgMobile from "@/assets/images/dorian-kitchen-mobile.webp";
 import styles from "./Hero.module.css";
 import pinkSticker from "@/assets/images/sticker-pink.svg";
 import { useRef } from "react";
