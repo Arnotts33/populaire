@@ -92,7 +92,15 @@ const Footer = () => {
 
 				<div className={styles.footerCredits}>
 					<span className={styles.creditsText}>© Populaire 2025</span>
-					<span className={styles.creditsText}>Site Credits</span>
+					<span className={styles.creditsText}>
+						<a
+							href="https://arnaudlahaut.com"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Site Credits
+						</a>
+					</span>
 				</div>
 			</div>
 		</footer>

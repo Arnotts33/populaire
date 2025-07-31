@@ -1,18 +1,17 @@
 .hero {
 	width: 100%;
-	overflow: hidden;
-	padding-block: 12rem 5rem;
-	position: relative;
+	min-height: calc(100dvh - 8rem);
+	display: grid;
 
-	@media (width <= 768px) {
-		padding-block: 9rem 4rem;
+	@media (width <= 540px) {
+		min-height: calc(100dvh - 8rem);
 	}
 }
 
 .heroContent {
 	max-width: 1536px;
 	height: 100%;
-	margin: 0 auto;
+	margin: auto;
 	padding-inline: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -21,7 +20,7 @@
 	gap: 0.5rem;
 }
 
-@media (width <= 768px) {
+@media (width <= 540px) {
 	.heroContent {
 		padding-inline: 1rem;
 	}
@@ -29,31 +28,18 @@
 
 .heroImgWrapper {
 	width: 100%;
-	overflow: hidden;
+	max-height: 65dvh;
+	aspect-ratio: 16 / 9;
+
+	@media (width <= 540px) {
+		aspect-ratio: 4 / 5;
+	}
 }
 
 .heroImg {
 	width: 100%;
-	aspect-ratio: 16 / 9;
+	height: 100%;
 	object-fit: cover;
-	display: block;
-
-	@media (width <= 768px) {
-		display: none;
-	}
-}
-
-.heroImgMobile {
-	display: none;
-
-	@media (width <= 768px) {
-		display: block;
-		width: 100vw;
-		max-width: 100%;
-		height: auto;
-		max-height: 65svh;
-		object-fit: cover;
-	}
 }
 
 .heroText {

@@ -47,6 +47,9 @@ export const metadata: Metadata = {
 			"max-image-preview": "large",
 		},
 	},
+	alternates: {
+		canonical: "https://populairebordeaux.fr",
+	},
 };
 
 export default function RootLayout({
