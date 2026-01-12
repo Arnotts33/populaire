@@ -74,7 +74,7 @@ const Footer = () => {
 					</div>
 					<div className={styles.footerInfoItem}>
 						<a
-							href="https://www.instagram.com/populairedwitcherie/"
+							href="https://www.instagram.com/populaire.bordeaux/"
 							target="_blank"
 							rel="noopener noreferrer"
 							className={styles.instaLogo}

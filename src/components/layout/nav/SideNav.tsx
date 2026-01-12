@@ -57,7 +57,7 @@ const SideNav = ({ toggleMenu }: { toggleMenu: () => void }) => {
 				</nav>
 				<div className={styles.menuFooter}>
 					<a
-						href="https://www.instagram.com/populairedwitcherie/?hl=fr"
+						href="https://www.instagram.com/populaire.bordeaux/"
 						target="_blank"
 						className={styles.footerLink}
 					>
