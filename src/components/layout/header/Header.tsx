@@ -47,7 +47,7 @@ const Header = () => {
 									<li key={index} className={styles.el}>
 										<Link
 											href={item.href}
-											onClick={(event) => handleNavigation(event, item)}
+											// onClick={(event) => handleNavigation(event, item)}
 											className={styles.link}
 										>
 											{item.title}
