@@ -2,6 +2,7 @@
 	width: 100%;
 	min-height: calc(100dvh - 8rem);
 	display: grid;
+	overflow: hidden;
 
 	@media (width <= 540px) {
 		min-height: calc(100dvh - 16rem);
